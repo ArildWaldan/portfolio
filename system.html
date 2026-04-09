@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arnaud Derhan &mdash; Annexe Syst&egrave;me</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="back-nav">
+  <div class="container">
+    <a href="index.html">&larr; Retour au profil</a>
+  </div>
+</div>
+
+<header class="hero hero--light">
+  <div class="container">
+    <div class="section-label">Annexe</div>
+    <h1>Le syst&egrave;me multi-agents</h1>
+    <p class="subtitle">Conception et direction d&rsquo;une plateforme d&rsquo;orchestration multi-agents utilis&eacute;e en production quotidienne. Architecture, d&eacute;cisions de conception, et m&eacute;thode de travail.</p>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- ── ORIGINE ── -->
+  <section class="section">
+    <div class="section-label">Origine</div>
+    <h2>Un probl&egrave;me de coordination que rien ne r&eacute;solvait</h2>
+    <p>F&eacute;vrier 2026. Arnaud g&egrave;re en parall&egrave;le des domaines administratifs, financiers et op&eacute;rationnels qui se croisent et se bloquent mutuellement. Il utilise d&eacute;j&agrave; un premier agent IA pour la gestion courante. Quand un deuxi&egrave;me agent est ajout&eacute; pour les finances, un probl&egrave;me appara&icirc;t&nbsp;: les deux agents partagent le m&ecirc;me canal de communication. Impossible de savoir &agrave; qui on r&eacute;pond, et les conversations polluent mutuellement leur contexte.</p>
+    <p>Ce moment &mdash; deux agents en collision dans un seul fil &mdash; a d&eacute;clench&eacute; la construction de l&rsquo;architecture multi-agents. En quelques jours, six agents sp&eacute;cialis&eacute;s op&egrave;rent dans un espace d&eacute;di&eacute;, chacun mapp&eacute; &agrave; son propre canal, avec routage automatique des messages.</p>
+  </section>
+
+  <!-- ── ARCHITECTURE ── -->
+  <section class="section">
+    <div class="section-label">Architecture</div>
+    <h2>Ce que le syst&egrave;me fait</h2>
+    <p>La plateforme tourne sur une seule machine, en Python standard sans framework externe. Elle coordonne six agents sp&eacute;cialis&eacute;s et orchestre 15 sessions automatis&eacute;es.</p>
+
+    <div class="modules">
+      <div class="module-card">
+        <div class="name">Daemon central</div>
+        <div class="desc">Point unique de communication avec Telegram. Route chaque message vers le bon agent. G&egrave;re les sessions bidirectionnelles en temps r&eacute;el. 2&nbsp;500+ lignes de Python.</div>
+      </div>
+      <div class="module-card">
+        <div class="name">Orchestrateur de sessions</div>
+        <div class="desc">Planifie et ex&eacute;cute 15 sessions automatiques (14 programm&eacute;es, 1 d&eacute;clench&eacute;e par &eacute;v&eacute;nement). G&egrave;re les priorit&eacute;s, les mod&egrave;les, les timeouts, les limites de taux.</div>
+      </div>
+      <div class="module-card">
+        <div class="name">Syst&egrave;me de m&eacute;moire</div>
+        <div class="desc">Quatre niveaux de persistance&nbsp;: &eacute;tat partag&eacute; chaud, index th&eacute;matique par agent, tiroirs de connaissances ouverts &agrave; la demande, et archive compl&egrave;te consultable par recherche hybride.</div>
+      </div>
+      <div class="module-card">
+        <div class="name">Recherche hybride (RAG)</div>
+        <div class="desc">8&nbsp;000+ &eacute;changes index&eacute;s. Recherche s&eacute;mantique (vecteurs 384 dimensions) fusionn&eacute;e avec recherche par mots-cl&eacute;s. L&rsquo;agent d&eacute;cide seul ce qu&rsquo;il a besoin de retrouver.</div>
+      </div>
+      <div class="module-card">
+        <div class="name">Pipeline email</div>
+        <div class="desc">R&eacute;ception, classification automatis&eacute;e (s&eacute;paration contenu l&eacute;gitime / injection potentielle), puis traitement par l&rsquo;agent comp&eacute;tent. Index de recherche email s&eacute;par&eacute;.</div>
+      </div>
+      <div class="module-card">
+        <div class="name">S&eacute;curit&eacute; multiniveau</div>
+        <div class="desc">Quatre couches de d&eacute;fense&nbsp;: assainissement des entr&eacute;es, d&eacute;tection d&rsquo;injection, audit avec tra&ccedil;abilit&eacute;, firewall r&eacute;seau. V&eacute;rification biom&eacute;trique pour les op&eacute;rations sensibles. 2&nbsp;300 lignes d&eacute;di&eacute;es.</div>
+      </div>
+    </div>
+
+    <div class="metrics-grid">
+      <div class="metric"><span class="label">Agents sp&eacute;cialis&eacute;s</span><span class="value">6</span></div>
+      <div class="metric"><span class="label">Sessions automatis&eacute;es</span><span class="value">15</span></div>
+      <div class="metric"><span class="label">&Eacute;changes index&eacute;s</span><span class="value">8 000+</span></div>
+      <div class="metric"><span class="label">Code (Python + Shell)</span><span class="value">~20K lignes</span></div>
+    </div>
+  </section>
+
+  <!-- ── ROLE D'ARNAUD ── -->
+  <section class="section">
+    <div class="section-label">Direction</div>
+    <h2>Sp&eacute;cifier, arbitrer, corriger</h2>
+    <p>Arnaud ne code pas. Il <strong>sp&eacute;cifie l&rsquo;architecture, d&eacute;finit les comportements attendus, diagnostique les pannes, et it&egrave;re sur la conception</strong> jusqu&rsquo;&agrave; ce que le syst&egrave;me fonctionne en conditions r&eacute;elles. L&rsquo;IA impl&eacute;mente&nbsp;; lui d&eacute;cide quoi construire, pourquoi, et comment les pi&egrave;ces s&rsquo;embo&icirc;tent.</p>
+    <p>Ce n&rsquo;est pas de la g&eacute;n&eacute;ration de texte assist&eacute;e. Quelques exemples concrets de ce que ce r&ocirc;le de direction implique&nbsp;:</p>
+    <ul>
+      <li>Le syst&egrave;me de m&eacute;moire a &eacute;t&eacute; con&ccedil;u, test&eacute; et rejet&eacute; <strong>dix fois</strong> avant de trouver la bonne architecture. Chaque it&eacute;ration partait d&rsquo;un probl&egrave;me r&eacute;el, pas d&rsquo;une th&eacute;orie. Le design final s&rsquo;appuie sur de la recherche acad&eacute;mique (attention des LLM, sciences cognitives), des analyses de syst&egrave;mes open-source existants, et une m&eacute;taphore propos&eacute;e par Arnaud qui a structur&eacute; l&rsquo;architecture enti&egrave;re.</li>
+      <li>Un audit de 23 fichiers de prompts a r&eacute;v&eacute;l&eacute; que les instructions d&eacute;taill&eacute;es &eacute;tape par &eacute;tape produisaient des r&eacute;sultats plus m&eacute;diocres que des instructions centr&eacute;es sur l&rsquo;intention. Arnaud a formalis&eacute; une philosophie de sp&eacute;cification qui a &eacute;t&eacute; appliqu&eacute;e &agrave; l&rsquo;ensemble du syst&egrave;me.</li>
+      <li>Quand le mod&egrave;le a propos&eacute; des r&egrave;gles d&rsquo;efficacit&eacute; qui ont alt&eacute;r&eacute; le ton et la personnalit&eacute; des agents, Arnaud a identifi&eacute; le probl&egrave;me en quelques &eacute;changes et impos&eacute; un retour arri&egrave;re imm&eacute;diat.</li>
+    </ul>
+    <div class="story">Le sch&eacute;ma r&eacute;current&nbsp;: le mod&egrave;le converge trop vite sur la premi&egrave;re solution plausible. Arnaud force l&rsquo;exploration d&rsquo;alternatives, rejette les propositions qui ne r&eacute;sistent pas &agrave; l&rsquo;examen, et pousse vers une ambition plus &eacute;lev&eacute;e que ce que le mod&egrave;le propose spontan&eacute;ment.</div>
+  </section>
+
+  <!-- ── HISTOIRES D'ITERATION ── -->
+  <section class="section">
+    <div class="section-label">It&eacute;rations</div>
+    <h2>Trois probl&egrave;mes, trois r&eacute;ponses</h2>
+
+    <div class="pipeline">
+      <div class="pipeline-step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <p><strong>La panne silencieuse de 18 heures</strong> &mdash; Le daemon a tourn&eacute; pendant 18 heures dans un &eacute;tat cass&eacute;&nbsp;: vivant, recevant les messages, mais incapable de lancer la moindre session. Le diagnostic syst&egrave;me affichait &laquo;&nbsp;tout va bien&nbsp;&raquo; parce qu&rsquo;il ne savait pas d&eacute;tecter cette panne pr&eacute;cise. Le correctif a &eacute;t&eacute; triple&nbsp;: pr&eacute;vention (d&eacute;placer le point de d&eacute;faillance dans un bloc prot&eacute;g&eacute;), r&eacute;cup&eacute;ration automatique (nettoyage des sessions fant&ocirc;mes), d&eacute;tection (alerte quand le syst&egrave;me re&ccedil;oit mais ne traite plus). D&eacute;fense en profondeur, pas rustine.</p>
+        </div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <p><strong>Le syst&egrave;me de m&eacute;moire qui oubliait</strong> &mdash; Un agent inform&eacute; qu&rsquo;il ne devait pas appeler la mairie a recommand&eacute; d&rsquo;appeler la mairie &agrave; la session suivante. L&rsquo;information &eacute;tait pr&eacute;sente dans son contexte. Le probl&egrave;me n&rsquo;&eacute;tait pas l&rsquo;absence de donn&eacute;e mais la dilution de l&rsquo;attention dans un contexte trop charg&eacute;. La r&eacute;ponse&nbsp;: r&eacute;duire ce qui est inject&eacute; par d&eacute;faut, cr&eacute;er un syst&egrave;me de tiroirs ouverts &agrave; la demande, forcer le mod&egrave;le &agrave; chercher avant de r&eacute;pondre. Dix propositions rejet&eacute;es avant d&rsquo;y arriver. Design final fond&eacute; sur la recherche acad&eacute;mique et les sciences cognitives.</p>
+        </div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <p><strong>Les sessions planifi&eacute;es qui ne d&eacute;marraient jamais</strong> &mdash; 14 sessions programm&eacute;es via le planificateur syst&egrave;me restaient muettes&nbsp;: z&eacute;ro sortie, z&eacute;ro CPU, tu&eacute;es apr&egrave;s 40 minutes. Le m&ecirc;me script lanc&eacute; manuellement terminait en 32 secondes. Trois jours d&rsquo;investigation sur un probl&egrave;me d&rsquo;interaction entre le gestionnaire de processus macOS et les sous-processus. La solution&nbsp;: remplacer 14 configurations individuelles par un orchestrateur unique utilisant le SDK de Claude. Les sessions sont pass&eacute;es de &laquo;&nbsp;ne d&eacute;marre jamais&nbsp;&raquo; &agrave; &laquo;&nbsp;16 secondes&nbsp;&raquo;.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="story">Le point commun de ces trois histoires&nbsp;: le probl&egrave;me initial n&rsquo;est jamais le vrai probl&egrave;me. La panne silencieuse n&rsquo;&eacute;tait pas un bug isol&eacute; mais une cat&eacute;gorie de d&eacute;faillance non d&eacute;tect&eacute;e. L&rsquo;oubli n&rsquo;&eacute;tait pas un manque de donn&eacute;e mais un probl&egrave;me d&rsquo;architecture de l&rsquo;attention. Les sessions muettes n&rsquo;&eacute;taient pas un bug de script mais une incompatibilit&eacute; de mod&egrave;le d&rsquo;ex&eacute;cution.</div>
+  </section>
+
+  <!-- ── DECISIONS DE CONCEPTION ── -->
+  <section class="section">
+    <div class="section-label">Conception</div>
+    <h2>Les choix et leurs raisons</h2>
+    <p>Quelques d&eacute;cisions de conception qui illustrent la m&eacute;thode de travail&nbsp;:</p>
+
+    <div class="competences">
+      <div class="competence">
+        <span class="tag">Intent &gt; r&egrave;gles</span>
+        <span class="detail">Les prompts de type &laquo;&nbsp;checklist &eacute;tape par &eacute;tape&nbsp;&raquo; produisaient des r&eacute;sultats rigides et superficiels. Les prompts centr&eacute;s sur l&rsquo;intention &mdash; le quoi et le pourquoi, pas le comment &mdash; produisaient des r&eacute;ponses plus adapt&eacute;es. Ce constat, confirm&eacute; par un audit de 23 fichiers, est devenu un principe appliqu&eacute; &agrave; l&rsquo;ensemble du syst&egrave;me.</span>
+      </div>
+      <div class="competence">
+        <span class="tag">Injecter moins</span>
+        <span class="detail">Plus de contexte pr&eacute;-charg&eacute; signifie un raisonnement de moins bonne qualit&eacute;, ind&eacute;pendamment de la position de l&rsquo;information. L&rsquo;architecture a &eacute;t&eacute; invers&eacute;e&nbsp;: au lieu de tout charger par d&eacute;faut, le syst&egrave;me maintient un vide d&eacute;lib&eacute;r&eacute; qui force la recherche active.</span>
+      </div>
+      <div class="competence">
+        <span class="tag">Structure &gt; consigne</span>
+        <span class="detail">Une instruction dans le prompt peut &ecirc;tre ignor&eacute;e. Un outil bloqu&eacute; dans la configuration ne peut pas &ecirc;tre utilis&eacute;. Partout o&ugrave; c&rsquo;est possible, les contraintes sont appliqu&eacute;es par l&rsquo;architecture, pas par le comportement.</span>
+      </div>
+      <div class="competence">
+        <span class="tag">Voler les patterns</span>
+        <span class="detail">Avant tout changement structurel, &eacute;tude de la fa&ccedil;on dont un syst&egrave;me open-source de r&eacute;f&eacute;rence g&egrave;re le probl&egrave;me &eacute;quivalent. Si le syst&egrave;me mature ne l&rsquo;a pas construit, c&rsquo;est un signal d&rsquo;alerte. Les patterns sont adapt&eacute;s, jamais adopt&eacute;s en bloc.</span>
+      </div>
+      <div class="competence">
+        <span class="tag">D&eacute;fense en profondeur</span>
+        <span class="detail">Chaque probl&egrave;me de s&eacute;curit&eacute; ou de r&eacute;silience est trait&eacute; &agrave; trois niveaux&nbsp;: emp&ecirc;cher le probl&egrave;me, r&eacute;cup&eacute;rer s&rsquo;il survient, d&eacute;tecter si la r&eacute;cup&eacute;ration &eacute;choue.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CE QUE CA PROUVE ── -->
+  <section class="section">
+    <div class="section-label">Synth&egrave;se</div>
+    <h2>Ce que ce syst&egrave;me d&eacute;montre</h2>
+    <p>La plateforme g&egrave;re des domaines administratifs, financiers et op&eacute;rationnels. Son &eacute;chelle est personnelle. Ce qui est transf&eacute;rable, ce n&rsquo;est pas le syst&egrave;me lui-m&ecirc;me mais ce que sa construction prouve&nbsp;:</p>
+
+    <div class="modules">
+      <div class="module-card">
+        <div class="name">Conception it&eacute;rative</div>
+        <div class="desc">Dix propositions rejet&eacute;es pour le syst&egrave;me de m&eacute;moire. Chaque rejet fond&eacute; sur un probl&egrave;me concret, pas sur une pr&eacute;f&eacute;rence. Le design converge par &eacute;limination, pas par opinion.</div>
+      </div>
+      <div class="module-card">
+        <div class="name">Pens&eacute;e syst&egrave;me</div>
+        <div class="desc">Coordonner six agents qui ne doivent ni se contredire, ni se bloquer, ni d&eacute;river. Le probl&egrave;me est un probl&egrave;me d&rsquo;orchestration&nbsp;: d&eacute;pendances, flux de donn&eacute;es, isolation, coh&eacute;rence.</div>
+      </div>
+      <div class="module-card">
+        <div class="name">Rigueur de sp&eacute;cification</div>
+        <div class="desc">Chaque comportement est d&eacute;fini par &eacute;crit avant construction. Six documents de sp&eacute;cification formels. Une philosophie de prompting formalis&eacute;e apr&egrave;s audit et appliqu&eacute;e syst&eacute;matiquement.</div>
+      </div>
+      <div class="module-card">
+        <div class="name">R&eacute;silience en production</div>
+        <div class="desc">Le syst&egrave;me tourne en continu depuis f&eacute;vrier 2026. Chaque incident a produit une am&eacute;lioration structurelle, pas un contournement. La pire panne a &eacute;t&eacute; corrig&eacute;e en trois couches de d&eacute;fense.</div>
+      </div>
+    </div>
+
+    <div class="arch-block">
+      Le parall&egrave;le avec le terrain Castorama est direct. M&ecirc;me r&eacute;flexe&nbsp;: partir d&rsquo;un probl&egrave;me r&eacute;el, structurer ce qui manque, construire, mesurer, corriger. M&ecirc;me posture&nbsp;: construire avec les moyens disponibles au lieu d&rsquo;attendre les moyens id&eacute;aux. Niveau de complexit&eacute; diff&eacute;rent.
+    </div>
+  </section>
+
+  <!-- ── CROSS-LINK ── -->
+  <div class="crosslink-section">
+    <div class="section-label">Voir aussi</div>
+    <div class="deepdive-cards">
+      <a href="castorama.html" class="deepdive-card">
+        <div class="deepdive-card-content">
+          <div class="deepdive-card-title">Voir aussi &mdash; Castorama</div>
+          <p class="deepdive-card-desc">Reprise d&rsquo;un rayon abandonn&eacute;, 12 outils, adoption et robustesse au turnover.</p>
+        </div>
+        <span class="deepdive-card-arrow">&rarr;</span>
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<div class="kicker">
+  <div class="container">
+    <div class="kicker-content">
+      <div class="kicker-icon">&infin;</div>
+      <div class="kicker-text">
+        Ce document est produit par le syst&egrave;me qu&rsquo;il d&eacute;crit. Un pipeline multi-agents analyse le code source, extrait les donn&eacute;es, et g&eacute;n&egrave;re cette page &agrave; chaque &eacute;volution significative.
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    Arnaud Derhan &middot; Metz, France &middot; <a href="#">LinkedIn</a>
+  </div>
+</footer>
+
+</body>
+</html>
