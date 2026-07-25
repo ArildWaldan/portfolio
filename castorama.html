@@ -37,26 +37,30 @@
     <div class="story">Le produit n&rsquo;est pas une collection de pages catalogue. C&rsquo;est une m&eacute;thode r&eacute;p&eacute;t&eacute;e&nbsp;: observer comment la gamme se vend, formaliser ses r&egrave;gles, choisir l&rsquo;interaction adapt&eacute;e, puis mesurer l&rsquo;usage en production.</div>
     <figure class="product-proof product-proof-gallery">
       <div class="proof-gallery">
-        <a class="proof-shot proof-shot-wide" href="https://casto-portes.netlify.app/" target="_blank" rel="noopener noreferrer">
+        <button class="proof-shot proof-shot-wide" type="button" data-lightbox-src="assets/portail-portes-configurateur.jpg" data-lightbox-alt="Configurateur d’une porte intérieure dans le portail vendeur">
           <img src="assets/portail-portes-configurateur.jpg" alt="Configurateur d&rsquo;une porte int&eacute;rieure dans le portail vendeur, avec variantes, prix, EAN et continuit&eacute; vers l&rsquo;outil de commande">
-          <span>Configurer une porte</span>
-        </a>
+          <span>Configurer une porte <small>Agrandir</small></span>
+        </button>
         <div class="proof-gallery-secondary">
-          <div class="proof-shot">
+          <button class="proof-shot" type="button" data-lightbox-src="assets/portail-garde-corps.jpg" data-lightbox-alt="Outil de composition d’un garde-corps à partir des mesures du projet">
             <img src="assets/portail-garde-corps.jpg" alt="Outil de composition d&rsquo;un garde-corps &agrave; partir des segments et mesures du projet">
-            <span>Composer un garde-corps</span>
-          </div>
-          <div class="proof-shot proof-shot-map">
+            <span>Composer un garde-corps <small>Agrandir</small></span>
+          </button>
+          <button class="proof-shot proof-shot-map" type="button" data-lightbox-src="assets/portail-carte-adoption.jpg" data-lightbox-alt="Carte de France montrant la diffusion organique du portail">
             <img src="assets/portail-carte-adoption.jpg" alt="Carte de France montrant la diffusion organique du portail dans les magasins Castorama">
-            <span>Visualiser la diffusion</span>
-          </div>
+            <span>Visualiser la diffusion <small>Agrandir</small></span>
+          </button>
         </div>
       </div>
       <figcaption>
         <span>Deux logiques de vente, deux exp&eacute;riences d&eacute;di&eacute;es, puis une diffusion nationale sans d&eacute;ploiement organis&eacute;.</span>
-        <a href="https://casto-portes.netlify.app/" target="_blank" rel="noopener noreferrer">Explorer le portail en production&nbsp;&rarr;</a>
+        <a href="https://casto-portes.netlify.app/#/portes" target="_blank" rel="noopener noreferrer">Ouvrir le configurateur portes en production&nbsp;&rarr;</a>
       </figcaption>
     </figure>
+    <dialog class="image-lightbox" aria-label="Aperçu agrandi">
+      <button class="lightbox-close" type="button" aria-label="Fermer l’image agrandie">&times;</button>
+      <img src="" alt="">
+    </dialog>
     <div class="metrics-grid">
       <div class="metric"><span class="label">Magasins</span><span class="value">70</span></div>
       <div class="metric"><span class="label">Navigateurs distincts</span><span class="value">549</span></div>
@@ -230,5 +234,22 @@
   </div>
 </footer>
 
+<script>
+  const lightbox = document.querySelector('.image-lightbox');
+  const lightboxImage = lightbox.querySelector('img');
+
+  document.querySelectorAll('[data-lightbox-src]').forEach((trigger) => {
+    trigger.addEventListener('click', () => {
+      lightboxImage.src = trigger.dataset.lightboxSrc;
+      lightboxImage.alt = trigger.dataset.lightboxAlt;
+      lightbox.showModal();
+    });
+  });
+
+  lightbox.querySelector('.lightbox-close').addEventListener('click', () => lightbox.close());
+  lightbox.addEventListener('click', (event) => {
+    if (event.target === lightbox) lightbox.close();
+  });
+</script>
 </body>
 </html>
