@@ -178,6 +178,56 @@ h2 {
   margin: 24px 0;
 }
 
+.product-proof {
+  margin: 30px 0 34px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.product-proof > a {
+  display: block;
+  background: #f2efe8;
+}
+
+.product-proof img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.product-proof figcaption {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 20px;
+  padding: 16px 18px;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.product-proof figcaption a {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.product-proof figcaption a:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .product-proof figcaption {
+    display: block;
+  }
+
+  .product-proof figcaption a {
+    display: inline-block;
+    margin-top: 8px;
+    white-space: normal;
+  }
+}
+
 .range-card {
   position: relative;
   min-height: 176px;
