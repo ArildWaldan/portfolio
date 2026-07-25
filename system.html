@@ -36,7 +36,7 @@
   <section class="section">
     <div class="section-label">Architecture</div>
     <h2>Ce que le syst&egrave;me fait</h2>
-    <p>La plateforme tourne sur une seule machine, en Python standard sans framework externe. Elle coordonne six agents sp&eacute;cialis&eacute;s et orchestre 15 sessions automatis&eacute;es.</p>
+    <p>La plateforme tourne sur une seule machine et coordonne six domaines sp&eacute;cialis&eacute;s. Son architecture s&eacute;pare le canal de communication, les moteurs IA, la planification et la m&eacute;moire&nbsp;: le syst&egrave;me peut changer de fournisseur sans reconstruire ses comportements ni perdre son historique.</p>
 
     <div class="modules">
       <div class="module-card">
@@ -45,15 +45,15 @@
       </div>
       <div class="module-card">
         <div class="name">Orchestrateur de sessions</div>
-        <div class="desc">Planifie et ex&eacute;cute 15 sessions automatiques (14 programm&eacute;es, 1 d&eacute;clench&eacute;e par &eacute;v&eacute;nement). G&egrave;re les priorit&eacute;s, les mod&egrave;les, les timeouts, les limites de taux.</div>
+        <div class="desc">Planifie les travaux r&eacute;currents, arbitre les priorit&eacute;s et reprend les obligations ouvertes apr&egrave;s interruption. Le travail non termin&eacute; ne d&eacute;pend plus d&rsquo;une conversation rest&eacute;e en m&eacute;moire.</div>
       </div>
       <div class="module-card">
         <div class="name">Syst&egrave;me de m&eacute;moire</div>
-        <div class="desc">Quatre niveaux de persistance&nbsp;: &eacute;tat partag&eacute; chaud, index th&eacute;matique par agent, tiroirs de connaissances ouverts &agrave; la demande, et archive compl&egrave;te consultable par recherche hybride.</div>
+        <div class="desc">Les &eacute;tats courants restent courts&nbsp;; les d&eacute;cisions durables vivent dans des tiroirs ouverts &agrave; la demande. Un committer unique v&eacute;rifie et &eacute;crit la m&eacute;moire pour &eacute;viter les contradictions.</div>
       </div>
       <div class="module-card">
         <div class="name">Recherche hybride (RAG)</div>
-        <div class="desc">8&nbsp;000+ &eacute;changes index&eacute;s. Recherche s&eacute;mantique (vecteurs 384 dimensions) fusionn&eacute;e avec recherche par mots-cl&eacute;s. L&rsquo;agent d&eacute;cide seul ce qu&rsquo;il a besoin de retrouver.</div>
+        <div class="desc">Plus de 16&nbsp;000 &eacute;changes consultables par recherche s&eacute;mantique et par mots-cl&eacute;s. L&rsquo;agent retrouve les d&eacute;cisions, corrections et contraintes avant de proposer une action.</div>
       </div>
       <div class="module-card">
         <div class="name">Pipeline email</div>
@@ -61,14 +61,14 @@
       </div>
       <div class="module-card">
         <div class="name">S&eacute;curit&eacute; multiniveau</div>
-        <div class="desc">Quatre couches de d&eacute;fense&nbsp;: assainissement des entr&eacute;es, d&eacute;tection d&rsquo;injection, audit avec tra&ccedil;abilit&eacute;, firewall r&eacute;seau. V&eacute;rification biom&eacute;trique pour les op&eacute;rations sensibles. 2&nbsp;300 lignes d&eacute;di&eacute;es.</div>
+        <div class="desc">Assainissement des entr&eacute;es, fronti&egrave;res d&rsquo;acc&egrave;s, journaux d&rsquo;audit et validations externes. Les actions sensibles sont contraintes par l&rsquo;architecture, pas seulement par une consigne au mod&egrave;le.</div>
       </div>
     </div>
 
     <div class="metrics-grid">
       <div class="metric"><span class="label">Agents sp&eacute;cialis&eacute;s</span><span class="value">6</span></div>
-      <div class="metric"><span class="label">Sessions automatis&eacute;es</span><span class="value">15</span></div>
-      <div class="metric"><span class="label">&Eacute;changes index&eacute;s</span><span class="value">8 000+</span></div>
+      <div class="metric"><span class="label">Moteurs interchangeables</span><span class="value">2</span></div>
+      <div class="metric"><span class="label">&Eacute;changes index&eacute;s</span><span class="value">16 000+</span></div>
       <div class="metric"><span class="label">Code (Python + Shell)</span><span class="value">~20K lignes</span></div>
     </div>
   </section>
@@ -108,7 +108,7 @@
       <div class="pipeline-step">
         <div class="step-number">3</div>
         <div class="step-content">
-          <p><strong>Les sessions planifi&eacute;es qui ne d&eacute;marraient jamais</strong> &mdash; 14 sessions programm&eacute;es via le planificateur syst&egrave;me restaient muettes&nbsp;: z&eacute;ro sortie, z&eacute;ro CPU, tu&eacute;es apr&egrave;s 40 minutes. Le m&ecirc;me script lanc&eacute; manuellement terminait en 32 secondes. Trois jours d&rsquo;investigation sur un probl&egrave;me d&rsquo;interaction entre le gestionnaire de processus macOS et les sous-processus. La solution&nbsp;: remplacer 14 configurations individuelles par un orchestrateur unique utilisant le SDK de Claude. Les sessions sont pass&eacute;es de &laquo;&nbsp;ne d&eacute;marre jamais&nbsp;&raquo; &agrave; &laquo;&nbsp;16 secondes&nbsp;&raquo;.</p>
+          <p><strong>Les sessions planifi&eacute;es qui ne d&eacute;marraient jamais</strong> &mdash; Des travaux programm&eacute;s restaient muets alors que le m&ecirc;me script fonctionnait manuellement. La solution n&rsquo;a pas &eacute;t&eacute; une nouvelle rustine de lancement, mais un orchestrateur unique. Cette abstraction a ensuite permis de passer de Claude &agrave; Codex comme moteur principal sans r&eacute;&eacute;crire les missions ni la couche de m&eacute;moire.</p>
         </div>
       </div>
     </div>
@@ -197,7 +197,7 @@
     <div class="kicker-content">
       <div class="kicker-icon">&infin;</div>
       <div class="kicker-text">
-        Ce document est produit par le syst&egrave;me qu&rsquo;il d&eacute;crit. Un pipeline multi-agents analyse le code source, extrait les donn&eacute;es, et g&eacute;n&egrave;re cette page &agrave; chaque &eacute;volution significative.
+        Cette mise &agrave; jour a &eacute;t&eacute; produite par le syst&egrave;me qu&rsquo;elle d&eacute;crit&nbsp;: audit de l&rsquo;architecture r&eacute;elle, correction des faits devenus obsol&egrave;tes, puis publication apr&egrave;s v&eacute;rification.
       </div>
     </div>
   </div>
@@ -205,7 +205,7 @@
 
 <footer class="footer">
   <div class="container">
-    Arnaud Derhan &middot; Metz, France &middot; <a href="#">LinkedIn</a>
+    Arnaud Derhan &middot; Metz, France
   </div>
 </footer>
 
