@@ -199,15 +199,13 @@ h2 {
 
 .proof-gallery {
   display: grid;
-  grid-template-columns: minmax(0, 1.72fr) minmax(240px, .72fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 2px;
   background: var(--border);
 }
 
 .proof-gallery-secondary {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  gap: 2px;
+  display: contents;
 }
 
 .proof-shot {
@@ -235,11 +233,15 @@ h2 {
 }
 
 .proof-shot-wide {
-  aspect-ratio: 1.48;
+  aspect-ratio: 1.38;
 }
 
 .proof-gallery-secondary .proof-shot {
-  aspect-ratio: 1.62;
+  aspect-ratio: 1.38;
+}
+
+.proof-shot-window img {
+  object-position: center 19%;
 }
 
 .proof-shot-map img {
@@ -341,18 +343,26 @@ h2 {
 
 .product-proof figcaption a:hover { text-decoration: underline; }
 
+.proof-links {
+  display: inline-flex;
+  gap: 16px;
+  white-space: nowrap;
+}
+
 @media (max-width: 640px) {
   .proof-gallery {
-    grid-template-columns: 1fr;
+    display: flex;
+    gap: 2px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
   }
 
-  .proof-gallery-secondary {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: none;
-  }
-
+  .proof-shot-wide,
   .proof-gallery-secondary .proof-shot {
-    aspect-ratio: 1.2;
+    flex: 0 0 88%;
+    aspect-ratio: 1.15;
+    scroll-snap-align: center;
   }
 
   .product-proof figcaption {
@@ -363,6 +373,10 @@ h2 {
     display: inline-block;
     margin-top: 8px;
     white-space: normal;
+  }
+
+  .proof-links {
+    display: flex;
   }
 }
 
