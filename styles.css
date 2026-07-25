@@ -164,6 +164,73 @@ h2 {
   letter-spacing: -0.5px;
 }
 
+.subheading {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 34px 0 12px;
+}
+
+.range-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.range-card {
+  position: relative;
+  min-height: 176px;
+  padding: 42px 18px 18px;
+  background: linear-gradient(145deg, var(--surface-raised), var(--surface));
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.range-card::after {
+  content: '';
+  position: absolute;
+  right: -28px;
+  bottom: -48px;
+  width: 100px;
+  height: 100px;
+  border: 1px solid var(--metric-border);
+  border-radius: 50%;
+}
+
+.range-index {
+  position: absolute;
+  top: 14px;
+  left: 18px;
+  color: var(--accent-warm);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.range-card .name {
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 9px;
+}
+
+.range-card .desc {
+  position: relative;
+  z-index: 1;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.evidence-note {
+  color: var(--text-muted);
+  font-size: 12px;
+  line-height: 1.55;
+  margin-top: -6px;
+}
+
 p {
   margin-bottom: 14px;
   color: var(--text-secondary);
@@ -612,6 +679,8 @@ ul li::before {
   p { font-size: 16px; line-height: 1.75; }
   .modules { grid-template-columns: 1fr; }
   .metrics-grid { grid-template-columns: 1fr; }
+  .range-grid { grid-template-columns: 1fr; }
+  .range-card { min-height: auto; }
   .competence { flex-direction: column; gap: 4px; }
   .competence .tag { align-self: flex-start; }
   .pipeline-step { gap: 12px; }
