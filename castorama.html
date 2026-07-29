@@ -32,7 +32,7 @@
     <h2>R&eacute;unir des gammes complexes sans uniformiser leur usage</h2>
     <p>Une porte, une fen&ecirc;tre et un garde-corps ne se vendent pas selon la m&ecirc;me logique. Une interface unique aurait simplifi&eacute; le projet technique, mais compliqu&eacute; le travail des vendeurs.</p>
     <div class="range-grid">
-      <div class="range-card"><span class="range-index">01</span><div class="name">Portes int&eacute;rieures</div><div class="desc">572 r&eacute;f&eacute;rences v&eacute;rifi&eacute;es, structur&eacute;es en familles configurables, puis rendues explorables par visuels et filtres progressifs.</div></div>
+      <div class="range-card"><span class="range-index">01</span><div class="name">Portes int&eacute;rieures</div><div class="desc">572 r&eacute;f&eacute;rences structur&eacute;es en familles configurables, puis rendues explorables par visuels et filtres progressifs.</div></div>
       <div class="range-card"><span class="range-index">02</span><div class="name">Fen&ecirc;tres</div><div class="desc">Dimensions client, tol&eacute;rances progressives et crit&egrave;res crois&eacute;s pour identifier les r&eacute;f&eacute;rences compatibles.</div></div>
       <div class="range-card"><span class="range-index">03</span><div class="name">Garde-corps</div><div class="desc">Calcul et composition d&rsquo;un projet &agrave; partir des mesures terrain.</div></div>
     </div>
@@ -118,7 +118,7 @@
   <section class="section">
     <div class="section-label">Suivi logistique</div>
     <h2>Faire entrer le suivi de commande dans l&rsquo;outil d&eacute;j&agrave; ouvert</h2>
-    <p>J&rsquo;ai con&ccedil;u et int&eacute;gr&eacute; Track &amp; Trace directement dans l&rsquo;application vendeur de mon &eacute;quipe, qui l&rsquo;utilise au quotidien. Pour chaque commande suivie, l&rsquo;outil rassemble les &eacute;tapes logistiques, les lignes re&ccedil;ues, les alertes client et les prochaines actions.</p>
+    <p>Plut&ocirc;t que d&rsquo;imposer un outil s&eacute;par&eacute;, j&rsquo;ai con&ccedil;u et int&eacute;gr&eacute; Track &amp; Trace dans l&rsquo;application vendeur d&eacute;j&agrave; utilis&eacute;e par mon &eacute;quipe. Pour chaque commande suivie, il rassemble les &eacute;tapes d&rsquo;acheminement, les lignes re&ccedil;ues, les alertes client et la prochaine action&nbsp;; l&rsquo;&eacute;quipe l&rsquo;utilise au quotidien.</p>
     <figure class="operational-proof">
       <button class="proof-shot" type="button" data-lightbox-src="img/track-trace.png" data-lightbox-alt="Track &amp; Trace intégré à l’application vendeur">
         <img src="img/track-trace.png" alt="Suivi de commande intégré à l’application vendeur, avec statuts d’expédition, transit et réception">
@@ -131,7 +131,7 @@
   <section class="section">
     <div class="section-label">Exploration fonctionnelle</div>
     <h2>Rendre exploitables les produits provisionn&eacute;s dans DCA</h2>
-    <p>J&rsquo;ai con&ccedil;u ce prototype pour rendre visibles et filtrables, dans DCA, les r&eacute;f&eacute;rences provisionn&eacute;es qui restaient difficiles &agrave; rep&eacute;rer. L&rsquo;objectif &eacute;tait de donner une lecture exploitable du stock concern&eacute;&nbsp;; il a &eacute;t&eacute; pr&eacute;sent&eacute; &agrave; l&rsquo;&eacute;quipe Produit et reste au rang de prototype fonctionnel.</p>
+    <p>Des r&eacute;f&eacute;rences provisionn&eacute;es existaient dans DCA mais restaient difficiles &agrave; identifier dans le travail quotidien. J&rsquo;ai prototyp&eacute; une couche de lecture et de filtrage directement dans l&rsquo;environnement existant. Pr&eacute;sent&eacute; &agrave; l&rsquo;&eacute;quipe Produit, le prototype n&rsquo;est pas d&eacute;ploy&eacute; &agrave; ce stade.</p>
     <figure class="operational-proof operational-proof--compact">
       <video controls muted playsinline preload="metadata" aria-label="Démonstration du prototype pour les produits provisionnés dans DCA">
         <source src="img/dca-provisionnes.mp4" type="video/mp4">
@@ -145,7 +145,7 @@
     <div class="section-label">Arbitrages</div>
     <h2>Faire &eacute;voluer sans interrompre l&rsquo;usage</h2>
     <p>Ces outils locaux ont &eacute;t&eacute; construits au contact d&rsquo;applications internes non document&eacute;es, de sessions prot&eacute;g&eacute;es et de flux susceptibles d&rsquo;&eacute;voluer. Cette contrainte impose des solutions pragmatiques&nbsp;: isoler les d&eacute;pendances fragiles, pr&eacute;voir des contournements et faire &eacute;voluer l&rsquo;architecture sans interrompre le travail quotidien.</p>
-    <p>J&rsquo;ai notamment regroup&eacute; l&rsquo;ensemble des scripts Tampermonkey d&eacute;j&agrave; utilis&eacute;s par l&rsquo;&eacute;quipe dans une extension Chrome. Elle ne cr&eacute;e pas un nouveau produit&nbsp;: elle transforme un ensemble de scripts &agrave; installer s&eacute;par&eacute;ment en un paquet unique, plus simple &agrave; installer, maintenir et mettre &agrave; jour.</p>
+    <p><strong>Distribution et maintenance.</strong> J&rsquo;ai regroup&eacute; l&rsquo;ensemble des scripts Tampermonkey utilis&eacute;s par l&rsquo;&eacute;quipe dans une extension Chrome unique&nbsp;: un seul paquet &agrave; installer et mettre &agrave; jour, au lieu de scripts distribu&eacute;s s&eacute;par&eacute;ment.</p>
     <p>Les outils historiques sont des solutions locales maintenues pour l&rsquo;&eacute;quipe. Le portail ouvre une autre &eacute;chelle&nbsp;: une port&eacute;e mesurable entre magasins et, d&eacute;sormais, une &eacute;tude interne de faisabilit&eacute; et d&rsquo;industrialisation de son concept.</p>
     <p><strong>P&eacute;rim&egrave;tre public&nbsp;:</strong> les captures sont anonymis&eacute;es et les d&eacute;monstrations utilisent un mode portfolio sans donn&eacute;es client ni acc&egrave;s authentifi&eacute; aux applications internes. Elles montrent les parcours et les r&egrave;gles m&eacute;tier, pas les environnements de production de Castorama.</p>
   </section>
