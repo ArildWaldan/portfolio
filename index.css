@@ -484,6 +484,10 @@ a:hover { opacity: 0.85; }
   border-top: 1px solid #23272f;
 }
 
+.duo--single {
+  grid-template-columns: minmax(0, 720px);
+}
+
 .duo-title {
   font-weight: 700;
   font-size: 24px;

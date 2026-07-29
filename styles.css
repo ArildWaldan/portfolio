@@ -344,6 +344,90 @@ h2 {
 
 .product-proof figcaption a:hover { text-decoration: underline; }
 
+.operational-proof {
+  margin: 28px 0 34px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.operational-proof > .proof-shot {
+  aspect-ratio: 1.65;
+}
+
+.operational-proof video {
+  display: block;
+  width: 100%;
+  max-height: 620px;
+  background: #090b10;
+}
+
+.operational-proof figcaption {
+  padding: 14px 18px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.operational-proof--compact {
+  max-width: 820px;
+}
+
+.system-flow {
+  display: grid;
+  grid-template-columns: repeat(9, auto);
+  align-items: center;
+  gap: 10px;
+  margin: 30px 0 8px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  overflow-x: auto;
+}
+
+.system-flow div {
+  min-width: 120px;
+  padding: 14px;
+  border: 1px solid var(--metric-border);
+  border-radius: 7px;
+  background: var(--surface-raised);
+}
+
+.system-flow strong,
+.system-flow span {
+  display: block;
+}
+
+.system-flow strong {
+  color: var(--text);
+  font-size: 13px;
+}
+
+.system-flow span {
+  margin-top: 4px;
+  color: var(--text-muted);
+  font-size: 11px;
+}
+
+.system-flow i {
+  color: var(--accent-warm);
+  font-style: normal;
+}
+
+@media (max-width: 640px) {
+  .system-flow {
+    grid-template-columns: 1fr;
+    overflow: visible;
+  }
+
+  .system-flow i {
+    text-align: center;
+    transform: rotate(90deg);
+  }
+}
+
 .proof-links {
   display: inline-flex;
   gap: 16px;
