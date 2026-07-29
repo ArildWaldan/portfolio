@@ -438,6 +438,72 @@ h2 {
   margin-top: -6px;
 }
 
+.adoption-proof {
+  margin: 24px 0 16px;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent-warm);
+  border-radius: 0 8px 8px 0;
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.adoption-proof-lead {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 22px 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.adoption-proof-value {
+  color: var(--accent-warm);
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -1.5px;
+  white-space: nowrap;
+}
+
+.adoption-proof-value small {
+  color: var(--text-muted);
+  font-size: 21px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+
+.adoption-proof-copy {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.adoption-proof-copy strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.adoption-proof-details {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.adoption-proof-details > div { padding: 16px 14px; }
+.adoption-proof-details > div:not(:last-child) { border-right: 1px solid var(--border); }
+.adoption-proof-details strong,
+.adoption-proof-details span { display: block; }
+
+.adoption-proof-details strong {
+  color: var(--accent);
+  font-size: 19px;
+  margin-bottom: 4px;
+}
+
+.adoption-proof-details span {
+  color: var(--text-muted);
+  font-size: 11px;
+  line-height: 1.35;
+}
+
 p {
   margin-bottom: 14px;
   color: var(--text-secondary);
@@ -886,6 +952,10 @@ ul li::before {
   p { font-size: 16px; line-height: 1.75; }
   .modules { grid-template-columns: 1fr; }
   .metrics-grid { grid-template-columns: 1fr; }
+  .adoption-proof-lead { align-items: flex-start; flex-direction: column; gap: 10px; }
+  .adoption-proof-details { grid-template-columns: 1fr 1fr; }
+  .adoption-proof-details > div:nth-child(2) { border-right: none; }
+  .adoption-proof-details > div:nth-child(-n+2) { border-bottom: 1px solid var(--border); }
   .range-grid { grid-template-columns: 1fr; }
   .range-card { min-height: auto; }
   .competence { flex-direction: column; gap: 4px; }

@@ -61,6 +61,7 @@
         <span class="proof-links">
           <a href="https://casto-portes.netlify.app/?demo=portfolio#/portes" target="_blank" rel="noopener noreferrer">Portes&nbsp;&rarr;</a>
           <a href="https://casto-portes.netlify.app/?demo=portfolio#/fenetres" target="_blank" rel="noopener noreferrer">Fen&ecirc;tres&nbsp;&rarr;</a>
+          <a href="https://casto-portes.netlify.app/garde-corps.html?demo=portfolio" target="_blank" rel="noopener noreferrer">Garde-corps&nbsp;&rarr;</a>
         </span>
       </figcaption>
     </figure>
@@ -68,13 +69,17 @@
       <button class="lightbox-close" type="button" aria-label="Fermer l’image agrandie">&times;</button>
       <img src="" alt="">
     </dialog>
-    <div class="metrics-grid">
-      <div class="metric"><span class="label">Magasins</span><span class="value" data-stat="network.stores_reached">73</span></div>
-      <div class="metric"><span class="label">Couverture France</span><span class="value"><span data-stat="network.coverage_percent">78</span>&nbsp;%</span></div>
-      <div class="metric"><span class="label">Actifs sur 7 jours</span><span class="value" data-stat="network.active_stores_7d">58</span></div>
-      <div class="metric"><span class="label">Revenus plusieurs jours</span><span class="value" data-stat="network.returning_stores">64</span></div>
-      <div class="metric"><span class="label">Recherches</span><span class="value" data-stat="actions.searches">1&nbsp;606</span></div>
-      <div class="metric"><span class="label">EAN copi&eacute;s</span><span class="value" data-stat="actions.ean_copies">1&nbsp;700</span></div>
+    <div class="adoption-proof">
+      <div class="adoption-proof-lead">
+        <span class="adoption-proof-value"><span data-stat="totals.unique_stores">73</span><small> / 94</small></span>
+        <span class="adoption-proof-copy">magasins ont ouvert le portail<br><strong><span data-coverage>78</span>&nbsp;% du parc France</strong></span>
+      </div>
+      <div class="adoption-proof-details">
+        <div><strong data-stat="totals.unique_users">635</strong><span>navigateurs distincts</span></div>
+        <div><strong data-stat="totals.connections">3&nbsp;014</strong><span>connexions</span></div>
+        <div><strong data-stat="totals.searches">1&nbsp;606</strong><span>recherches</span></div>
+        <div><strong data-stat="totals.ean_copies">1&nbsp;700</strong><span>EAN copi&eacute;s</span></div>
+      </div>
     </div>
     <p class="evidence-note" data-analytics-period>Du 30 juin au 29 juillet 2026 &middot; mise &agrave; jour quotidienne. Aucun relais si&egrave;ge, aucune communication officielle, aucun plan de d&eacute;ploiement organis&eacute;.</p>
     <p>Le concept fait aujourd&rsquo;hui l&rsquo;objet d&rsquo;une <strong>&eacute;tude de faisabilit&eacute; et d&rsquo;industrialisation</strong> chez Castorama.</p>
@@ -110,7 +115,7 @@
       </div>
       <div class="module-card">
         <div class="name">Portail vendeur multi-gamme</div>
-        <div class="desc">Le premier produit sorti du seul p&eacute;rim&egrave;tre local. Partag&eacute; entre vendeurs sans plan de d&eacute;ploiement, il a &eacute;t&eacute; ouvert dans <strong data-stat="network.stores_reached">73</strong> magasins et produit des traces d&rsquo;usage pr&eacute;cises, de la recherche jusqu&rsquo;&agrave; la copie d&rsquo;un EAN.</div>
+        <div class="desc">Le premier produit sorti du seul p&eacute;rim&egrave;tre local. Partag&eacute; entre vendeurs sans plan de d&eacute;ploiement, il produit des traces d&rsquo;usage pr&eacute;cises, de la recherche jusqu&rsquo;&agrave; la copie d&rsquo;un EAN.</div>
       </div>
     </div>
     <p>Ces outils s&rsquo;appuient selon les cas sur Tampermonkey, des API internes non document&eacute;es, Google Sheets, Glide, puis React et TypeScript. La technique est un moyen&nbsp;: la difficult&eacute; principale reste de reconstituer une logique m&eacute;tier exploitable &agrave; partir de syst&egrave;mes et de donn&eacute;es fragment&eacute;s.</p>
@@ -139,7 +144,7 @@
     <div class="section-label">Adoption</div>
     <h2>L&rsquo;usage avant le d&eacute;ploiement</h2>
     <p>Je construis d&rsquo;abord au plus pr&egrave;s du geste m&eacute;tier. Si l&rsquo;outil demande une campagne d&rsquo;&eacute;vang&eacute;lisation pour survivre, c&rsquo;est souvent qu&rsquo;il ajoute une contrainte au lieu d&rsquo;en retirer une.</p>
-    <p>Les outils historiques sont rest&eacute;s volontairement contenus &agrave; l&rsquo;&eacute;quipe locale. Le portail a chang&eacute; l&rsquo;&eacute;chelle de la preuve&nbsp;: sans relais si&egrave;ge ni communication officielle, des vendeurs l&rsquo;ont transmis &agrave; d&rsquo;autres vendeurs jusqu&rsquo;&agrave; atteindre <strong data-stat="network.stores_reached">73</strong> magasins.</p>
+    <p>Les outils historiques sont rest&eacute;s volontairement contenus &agrave; l&rsquo;&eacute;quipe locale. Le portail a chang&eacute; l&rsquo;&eacute;chelle de la preuve&nbsp;: sans relais si&egrave;ge ni communication officielle, des vendeurs l&rsquo;ont transmis &agrave; d&rsquo;autres vendeurs &agrave; l&rsquo;&eacute;chelle nationale.</p>
     <p>Le turnover du commerce rend cette exigence tr&egrave;s concr&egrave;te. Un bon outil doit transmettre une partie de la connaissance du rayon&nbsp;: rendre un dossier reprenable, une gamme interrogeable et une prochaine action visible sans d&eacute;pendre de la m&eacute;moire d&rsquo;une seule personne.</p>
   </section>
 
@@ -153,8 +158,6 @@
     <div class="metrics-grid">
       <div class="metric"><span class="label">Devis / transport</span><span class="value">10 min &rarr; 5s</span></div>
       <div class="metric"><span class="label">Couverture catalogue</span><span class="value">~20% &rarr; 100%</span></div>
-      <div class="metric"><span class="label">Diffusion portail</span><span class="value">organique</span></div>
-      <div class="metric"><span class="label">Magasins portail</span><span class="value" data-stat="network.stores_reached">73</span></div>
       <div class="metric"><span class="label">CA sur-mesure</span><span class="value">~60 K&euro;/an</span></div>
       <div class="metric"><span class="label">Point de d&eacute;part</span><span class="value">quasi-n&eacute;ant</span></div>
     </div>
@@ -233,6 +236,9 @@
         const value = valueAtPath(data, node.dataset.stat);
         if (typeof value === 'number') node.textContent = formatter.format(value);
       });
+      const stores = valueAtPath(data, 'totals.unique_stores');
+      const coverage = document.querySelector('[data-coverage]');
+      if (typeof stores === 'number' && coverage) coverage.textContent = Math.round((stores / 94) * 100);
       if (data.first_seen && data.last_seen) {
         const formatDate = (value) => new Intl.DateTimeFormat('fr-FR', {
           day: 'numeric',

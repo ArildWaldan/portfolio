@@ -20,6 +20,7 @@
     <nav class="topbar-nav">
       <a class="link-accent" href="https://casto-portes.netlify.app/?demo=portfolio#/portes" target="_blank" rel="noopener noreferrer">Portail portes &nearr;</a>
       <a class="link-accent" href="https://casto-portes.netlify.app/?demo=portfolio#/fenetres" target="_blank" rel="noopener noreferrer">Fen&ecirc;tres &nearr;</a>
+      <a class="link-accent" href="https://casto-portes.netlify.app/garde-corps.html?demo=portfolio" target="_blank" rel="noopener noreferrer">Garde-corps &nearr;</a>
       <a class="btn-contact" href="#" data-contact-href>&Eacute;changer</a>
     </nav>
   </header>
@@ -34,16 +35,16 @@
   <!-- metrics band -->
   <section class="metrics">
     <div class="metric">
-      <div class="metric-value" data-stat="network.stores_reached">73</div>
-      <div class="metric-label">magasins utilisateurs, sans d&eacute;ploiement organis&eacute;</div>
-    </div>
-    <div class="metric">
       <div class="metric-value">10&nbsp;min&nbsp;&rarr;&nbsp;5&nbsp;s</div>
       <div class="metric-label">pour une op&eacute;ration de devis &amp; transport</div>
     </div>
     <div class="metric">
       <div class="metric-value">20&nbsp;&rarr;&nbsp;100&nbsp;%</div>
       <div class="metric-label">du catalogue fen&ecirc;tres accessible instantan&eacute;ment &agrave; partir des dimensions du client</div>
+    </div>
+    <div class="metric">
+      <div class="metric-value">~60&nbsp;K&euro;/an</div>
+      <div class="metric-label">d&rsquo;activit&eacute; sur-mesure reconstruite depuis une ann&eacute;e de quasi-abandon</div>
     </div>
   </section>
 
@@ -66,6 +67,7 @@
       <div class="proof-links">
         <a class="link-accent" href="https://casto-portes.netlify.app/?demo=portfolio#/portes" target="_blank" rel="noopener noreferrer">Essayer les portes &nearr;</a>
         <a class="link-accent" href="https://casto-portes.netlify.app/?demo=portfolio#/fenetres" target="_blank" rel="noopener noreferrer">Essayer les fen&ecirc;tres &nearr;</a>
+        <a class="link-accent" href="https://casto-portes.netlify.app/garde-corps.html?demo=portfolio" target="_blank" rel="noopener noreferrer">Essayer le garde-corps &nearr;</a>
       </div>
     </div>
 
@@ -101,12 +103,16 @@
     <div>
       <div class="eyebrow">ADOPTION</div>
       <h2>Diffus&eacute; de vendeur &agrave; vendeur</h2>
-      <p class="adoption-intro">Aucun relais si&egrave;ge, aucune communication officielle&nbsp;: <strong data-stat="network.stores_reached">73</strong> magasins l&rsquo;ont ouvert, puis y sont revenus parce qu&rsquo;il retire une contrainte au lieu d&rsquo;en ajouter une.</p>
-      <div class="adoption-stats">
-        <div class="stat stat-primary"><span>Couverture du parc France</span><strong><span data-stat="network.coverage_percent">78</span>&nbsp;%</strong></div>
-        <div class="stat"><span>Magasins actifs sur 7 jours</span><strong data-stat="network.active_stores_7d">58</strong></div>
-        <div class="stat"><span>Magasins revenus plusieurs jours</span><strong data-stat="network.returning_stores">64</strong></div>
-        <div class="stat"><span>EAN copi&eacute;s pour commander</span><strong data-stat="actions.ean_copies">1&nbsp;700</strong></div>
+      <p class="adoption-intro">Aucun relais si&egrave;ge, aucune communication officielle&nbsp;: le portail s&rsquo;est diffus&eacute; directement entre vendeurs.</p>
+      <div class="adoption-lead">
+        <strong><span data-stat="totals.unique_stores">73</span><span class="adoption-denominator"> / 94</span></strong>
+        <span>magasins Castorama ont ouvert le portail<br><b><span data-coverage>78</span>&nbsp;% du parc France</b></span>
+      </div>
+      <div class="adoption-stats adoption-stats--usage">
+        <div class="stat"><strong data-stat="totals.unique_users">635</strong><span>navigateurs distincts</span></div>
+        <div class="stat"><strong data-stat="totals.connections">3&nbsp;014</strong><span>connexions</span></div>
+        <div class="stat"><strong data-stat="totals.searches">1&nbsp;606</strong><span>recherches</span></div>
+        <div class="stat"><strong data-stat="totals.ean_copies">1&nbsp;700</strong><span>EAN copi&eacute;s pour commander</span></div>
       </div>
       <div class="adoption-period" data-analytics-period>Du 30 juin au 29 juillet 2026 &middot; mise &agrave; jour quotidienne.</div>
     </div>
@@ -195,6 +201,9 @@
         var value = valueAtPath(data, node.getAttribute('data-stat'));
         if (typeof value === 'number') node.textContent = formatter.format(value);
       });
+      var stores = valueAtPath(data, 'totals.unique_stores');
+      var coverage = document.querySelector('[data-coverage]');
+      if (typeof stores === 'number' && coverage) coverage.textContent = Math.round((stores / 94) * 100);
       if (data.first_seen && data.last_seen) {
         var formatDate = function (value) { return new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(value)); };
         document.querySelector('[data-analytics-period]').textContent = 'Du ' + formatDate(data.first_seen) + ' au ' + formatDate(data.last_seen) + ' · mise à jour quotidienne.';
