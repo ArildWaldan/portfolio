@@ -3,117 +3,182 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arnaud Derhan &mdash; Conception de syst&egrave;mes utiles</title>
-<link rel="stylesheet" href="styles.css">
+<title>Arnaud Derhan &mdash; Construire ce qui manque</title>
+<meta name="description" content="Manager d'un rayon menuiserie chez Castorama, je con&ccedil;ois depuis le terrain les outils qui manquent : compris dans l'usage, construits sans budget IT, adopt&eacute;s sans plan de d&eacute;ploiement.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;family=Archivo:wght@500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
 </head>
 <body>
 
-<header class="hero">
-  <div class="container">
-    <div class="label">Portfolio &middot; terrain &amp; syst&egrave;mes</div>
-    <h1>Construire ce qui manque</h1>
-    <p class="subtitle">Arnaud Derhan &mdash; je pars d&rsquo;un travail r&eacute;el, j&rsquo;en formalise les frictions et je construis le dispositif qui permet de mieux l&rsquo;ex&eacute;cuter.</p>
-  </div>
-</header>
+<div class="page">
 
-<main class="container">
+  <!-- top bar -->
+  <header class="topbar">
+    <div class="topbar-id">AD &mdash; <span>Arnaud Derhan</span> &middot; Metz</div>
+    <nav class="topbar-nav">
+      <a class="link-accent" href="https://casto-portes.netlify.app/#/portes" target="_blank" rel="noopener noreferrer">Portail portes &nearr;</a>
+      <a class="link-accent" href="https://casto-portes.netlify.app/#/fenetres" target="_blank" rel="noopener noreferrer">Fen&ecirc;tres &nearr;</a>
+      <a class="link-accent" href="https://casto-portes.netlify.app/#/garde-corps" target="_blank" rel="noopener noreferrer">Garde-corps &nearr;</a>
+      <a class="btn-contact" href="#" data-contact-href>&Eacute;changer</a>
+    </nav>
+  </header>
 
-  <section class="section">
-    <div class="section-label">Contexte</div>
-    <h2>Une m&ecirc;me pratique, deux terrains</h2>
-    <p>Je travaille aujourd&rsquo;hui chez Castorama comme manager d&rsquo;un rayon menuiserie sur-mesure. Depuis le terrain, j&rsquo;ai construit les outils qui manquaient pour vendre, suivre et transmettre un travail complexe. En parall&egrave;le, j&rsquo;ai con&ccedil;u un syst&egrave;me personnel de pilotage multi-agent pour organiser des sujets interd&eacute;pendants dans la dur&eacute;e.</p>
-    <p>Ces deux preuves n&rsquo;ont ni la m&ecirc;me &eacute;chelle ni les m&ecirc;mes utilisateurs. Elles montrent pourtant la m&ecirc;me pratique&nbsp;: <strong>observer un usage, rendre ses r&egrave;gles explicites, relier les bonnes briques et corriger le dispositif lorsqu&rsquo;il ne tient pas dans le r&eacute;el</strong>.</p>
+  <!-- hero -->
+  <section class="hero">
+    <div class="kicker">TERRAIN &rarr; R&Egrave;GLES &rarr; OUTIL &rarr; USAGE</div>
+    <h1>Construire ce qui manque.</h1>
+    <p>Manager d&rsquo;un rayon menuiserie chez Castorama, je con&ccedil;ois depuis le terrain les outils qui manquent&nbsp;: compris dans l&rsquo;usage, construits sans budget IT, adopt&eacute;s sans plan de d&eacute;ploiement.</p>
   </section>
 
-  <section class="section">
-    <div class="section-label">Terrain</div>
+  <!-- metrics band -->
+  <section class="metrics">
+    <div class="metric">
+      <div class="metric-value">70</div>
+      <div class="metric-label">magasins atteints en moins d&rsquo;un mois, sans d&eacute;ploiement organis&eacute;</div>
+    </div>
+    <div class="metric">
+      <div class="metric-value">10&nbsp;min&nbsp;&rarr;&nbsp;5&nbsp;s</div>
+      <div class="metric-label">pour une op&eacute;ration de devis &amp; transport</div>
+    </div>
+    <div class="metric">
+      <div class="metric-value">20&nbsp;&rarr;&nbsp;100&nbsp;%</div>
+      <div class="metric-label">du catalogue fen&ecirc;tres accessible instantan&eacute;ment &agrave; partir des dimensions du client</div>
+    </div>
+  </section>
+
+  <!-- main proof -->
+  <section class="proof">
+    <div class="eyebrow">LA PREUVE PRINCIPALE</div>
     <h2>Un portail vendeur, trois logiques de vente</h2>
-    <p>J&rsquo;ai con&ccedil;u un portail multi-gamme pour rendre des catalogues de menuiserie complexes directement actionnables par les vendeurs. Plut&ocirc;t que d&rsquo;imposer la m&ecirc;me interface &agrave; chaque produit, chaque logique m&eacute;tier devient un parcours adapt&eacute;&nbsp;:</p>
-    <div class="range-grid">
-      <div class="range-card"><span class="range-index">01</span><div class="name">Portes int&eacute;rieures</div><div class="desc">572 r&eacute;f&eacute;rences audit&eacute;es, puis une exploration visuelle et des filtres progressifs pour passer du projet aux mod&egrave;les compatibles.</div></div>
-      <div class="range-card"><span class="range-index">02</span><div class="name">Fen&ecirc;tres</div><div class="desc">Recherche dimensionnelle, tol&eacute;rances progressives et croisement des contraintes utiles &agrave; la vente.</div></div>
-      <div class="range-card"><span class="range-index">03</span><div class="name">Garde-corps</div><div class="desc">Aide au calcul et &agrave; la composition pour transformer les mesures terrain en projet exploitable.</div></div>
+    <p class="proof-intro">Des catalogues de menuiserie complexes rendus directement actionnables pendant la vente. Chaque gamme garde sa logique&nbsp;: exploration visuelle pour les portes, recherche dimensionnelle pour les fen&ecirc;tres, composition pour les garde-corps.</p>
+    <div class="browser-frame">
+      <div class="browser-chrome">
+        <span class="browser-dot"></span>
+        <span class="browser-dot"></span>
+        <span class="browser-dot"></span>
+        <span class="browser-url">casto-portes.netlify.app</span>
+      </div>
+      <img src="img/portes-galerie.webp" alt="Galerie du portail portes int&eacute;rieures">
     </div>
-    <div class="story">Une m&ecirc;me philosophie produit, trois exp&eacute;riences distinctes&nbsp;: partir du geste de vente r&eacute;el, formaliser les r&egrave;gles de la gamme, puis r&eacute;duire l&rsquo;effort n&eacute;cessaire pour arriver &agrave; une solution fiable.</div>
+    <div class="proof-caption">
+      <div class="proof-note">Portail multi-gamme, en production &mdash; concept actuellement &eacute;tudi&eacute; pour une industrialisation chez Castorama.</div>
+      <div class="proof-links">
+        <a class="link-accent" href="https://casto-portes.netlify.app/#/portes" target="_blank" rel="noopener noreferrer">Essayer les portes &nearr;</a>
+        <a class="link-accent" href="https://casto-portes.netlify.app/#/fenetres" target="_blank" rel="noopener noreferrer">Essayer les fen&ecirc;tres &nearr;</a>
+        <a class="link-accent" href="https://casto-portes.netlify.app/#/garde-corps" target="_blank" rel="noopener noreferrer">Essayer le garde-corps &nearr;</a>
+      </div>
+    </div>
 
-    <div class="story">Mis en circulation depuis le terrain, le portail a &eacute;t&eacute; utilis&eacute; dans 70 magasins en moins d&rsquo;un mois. L&rsquo;annexe Castorama documente la diffusion, les usages et les limites de chaque brique &agrave; partir de preuves dat&eacute;es.</div>
-
-    <h3 class="subheading">Le socle construit avant le portail</h3>
-    <p>Cette d&eacute;marche prolonge quatre ann&eacute;es de conception d&rsquo;outils internes, sans budget IT, utilis&eacute;s dans le travail quotidien de l&rsquo;&eacute;quipe&nbsp;:</p>
-    <ul>
-      <li>un pipeline de suivi des commandes sur-mesure construit &agrave; partir d&rsquo;API internes non document&eacute;es&nbsp;;</li>
-      <li>un outil de devis et transport qui fait passer une op&eacute;ration de <strong>10 minutes &agrave; 5 secondes</strong>&nbsp;;</li>
-      <li>un moteur de recherche fen&ecirc;tres avec tol&eacute;rances dimensionnelles, faisant passer la couverture pratique du catalogue de <strong>~20&nbsp;% &agrave; 100&nbsp;%</strong>&nbsp;;</li>
-      <li>des syst&egrave;mes de suivi, alertes, tableaux de bord et outils d&rsquo;&eacute;quipe.</li>
-    </ul>
-    <div class="deepdive-cards" style="margin-top: 20px;">
-      <a href="castorama.html" class="deepdive-card">
-        <div class="deepdive-card-content">
-          <span class="deepdive-card-label">Annexe terrain</span>
-          <div class="deepdive-card-title">Castorama</div>
-          <p class="deepdive-card-desc">Portail multi-gamme, diffusion organique dans 70 magasins, puis quatre ans d&rsquo;outils con&ccedil;us depuis le terrain.</p>
+    <!-- three ranges -->
+    <div class="ranges">
+      <div class="range-card">
+        <img src="img/portes-fiche.webp" alt="Fiche de configuration d&rsquo;une porte">
+        <div class="range-body">
+          <div class="range-name">Portes int&eacute;rieures</div>
+          <div class="range-desc">572 r&eacute;f&eacute;rences audit&eacute;es, explorables par visuels et filtres progressifs, jusqu&rsquo;&agrave; l&rsquo;EAN et au lien de commande.</div>
         </div>
-        <span class="deepdive-card-arrow">&rarr;</span>
-      </a>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-label">M&eacute;thode</div>
-    <h2>Ce que &ccedil;a dit de ma fa&ccedil;on de travailler</h2>
-    <div class="competences">
-      <div class="competence">
-        <span class="tag">Diagnostic</span>
-        <span class="detail">Comprendre pourquoi un process ou un outil ne tient pas vraiment dans le r&eacute;el.</span>
       </div>
-      <div class="competence">
-        <span class="tag">Racine</span>
-        <span class="detail">Identifier la friction racine plut&ocirc;t que traiter le sympt&ocirc;me.</span>
-      </div>
-      <div class="competence">
-        <span class="tag">Conception</span>
-        <span class="detail">Concevoir une solution praticable avec les moyens disponibles.</span>
-      </div>
-      <div class="competence">
-        <span class="tag">Robustesse</span>
-        <span class="detail">La faire tenir dans l&rsquo;usage quotidien, y compris dans un contexte de turnover et de faible support.</span>
-      </div>
-    </div>
-    <p>Mon r&ocirc;le se situe en amont et au contact de l&rsquo;usage&nbsp;: <strong>formuler le probl&egrave;me, sp&eacute;cifier le comportement attendu, diriger la construction, arbitrer et valider le r&eacute;sultat</strong>. L&rsquo;impl&eacute;mentation peut mobiliser de l&rsquo;IA, des outils no-code ou des services existants&nbsp;; le choix du moyen reste subordonn&eacute; au travail &agrave; rendre possible.</p>
-  </section>
-
-  <section class="section">
-    <div class="section-label">Syst&egrave;me</div>
-    <h2>La m&ecirc;me exigence, appliqu&eacute;e &agrave; la continuit&eacute;</h2>
-    <p>Le second terrain est un <strong>syst&egrave;me de pilotage utilis&eacute; quotidiennement</strong>&nbsp;: six domaines sp&eacute;cialis&eacute;s accessibles depuis Telegram, une m&eacute;moire structur&eacute;e, des travaux planifi&eacute;s et un suivi qui distingue l&rsquo;ex&eacute;cution d&rsquo;une action de la satisfaction effective du besoin.</p>
-    <p>L&agrave; o&ugrave; l&rsquo;annexe Castorama montre l&rsquo;adoption par des vendeurs, l&rsquo;annexe syst&egrave;me montre le travail de conception sous la surface&nbsp;: distribution des responsabilit&eacute;s, circulation du contexte, garde-fous et apprentissage par les incidents.</p>
-
-    <div class="deepdive-cards" style="margin-top: 20px;">
-      <a href="system.html" class="deepdive-card">
-        <div class="deepdive-card-content">
-          <span class="deepdive-card-label">Annexe conception</span>
-          <div class="deepdive-card-title">Syst&egrave;me de pilotage</div>
-          <p class="deepdive-card-desc">Coordination, continuit&eacute;, arbitrages et validation par l&rsquo;usage.</p>
+      <div class="range-card">
+        <img src="img/fenetres-resultats.webp" alt="Recherche dimensionnelle de fen&ecirc;tres">
+        <div class="range-body">
+          <div class="range-name">Fen&ecirc;tres</div>
+          <div class="range-desc">Recherche par dimensions client, tol&eacute;rances progressives et crit&egrave;res crois&eacute;s utiles &agrave; la vente.</div>
         </div>
-        <span class="deepdive-card-arrow">&rarr;</span>
-      </a>
+      </div>
+      <div class="range-card">
+        <img src="img/garde-corps.webp" alt="Composition d&rsquo;un garde-corps">
+        <div class="range-body">
+          <div class="range-name">Garde-corps</div>
+          <div class="range-desc">Des mesures terrain &agrave; un projet chiffr&eacute;&nbsp;: sch&eacute;ma, poteaux, kits et r&eacute;capitulatif de commande.</div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="section-label">Recherche</div>
-    <h2>L&agrave; o&ugrave; ce profil devient utile</h2>
-    <p>Je cherche un environnement o&ugrave; une expertise m&eacute;tier doit devenir un syst&egrave;me utilisable&nbsp;: produit vertical, configurateur, outil interne, service augment&eacute; ou dispositif soumis &agrave; des r&egrave;gles complexes.</p>
-    <p>Ma contribution est la plus forte lorsqu&rsquo;il faut <strong>enqu&ecirc;ter, mod&eacute;liser, prototyper et &eacute;prouver</strong>&nbsp;: comprendre un domaine, transformer ses contraintes en comportements explicites, puis conduire la solution jusqu&rsquo;&agrave; une preuve d&rsquo;usage. Le titre importe moins que la r&eacute;alit&eacute; du travail&nbsp;: conception fonctionnelle, product discovery, business analysis ou solution design peuvent nommer des parts de cette pratique, sans l&rsquo;&eacute;puiser.</p>
+  <!-- adoption -->
+  <section class="adoption">
+    <img class="adoption-map" src="img/adoption.webp" alt="Carte de diffusion du portail en France">
+    <div>
+      <div class="eyebrow">ADOPTION</div>
+      <h2>Diffus&eacute; de vendeur &agrave; vendeur</h2>
+      <p class="adoption-intro">Aucun relais si&egrave;ge, aucune communication officielle&nbsp;: le portail s&rsquo;est transmis entre magasins parce qu&rsquo;il retire une contrainte au lieu d&rsquo;en ajouter une.</p>
+      <div class="adoption-stats">
+        <div class="stat"><span>Navigateurs distincts</span><strong>549</strong></div>
+        <div class="stat"><span>Connexions</span><strong>2&nbsp;309</strong></div>
+        <div class="stat"><span>Recherches</span><strong>1&nbsp;353</strong></div>
+        <div class="stat"><span>EAN copi&eacute;s</span><strong>1&nbsp;292</strong></div>
+      </div>
+      <div class="adoption-period">Du 30 juin au 25 juillet 2026.</div>
+    </div>
   </section>
 
-</main>
+  <!-- socle -->
+  <section class="socle">
+    <div>
+      <div class="eyebrow">LE SOCLE</div>
+      <h2>Quatre ans &agrave; transformer les irritants du terrain en outils utilis&eacute;s</h2>
+      <p class="socle-intro">Avant le portail, des outils internes utilis&eacute;s chaque jour par l&rsquo;&eacute;quipe&nbsp;:</p>
+      <div class="socle-list">
+        <div class="socle-item"><span class="dash">&mdash;</span><span>suivi des devis, commandes sp&eacute;ciales et projets, avec relances&nbsp;;</span></div>
+        <div class="socle-item"><span class="dash">&mdash;</span><span>devis &amp; transport pr&eacute;-remplis par API internes&nbsp;: <strong>10&nbsp;min &rarr; 5&nbsp;s</strong>&nbsp;;</span></div>
+        <div class="socle-item"><span class="dash">&mdash;</span><span>recherche dimensionnelle fen&ecirc;tres, reprise ensuite dans le portail&nbsp;;</span></div>
+        <div class="socle-item"><span class="dash">&mdash;</span><span>alertes, tableaux de bord et outils d&rsquo;&eacute;quipe.</span></div>
+      </div>
+    </div>
+    <div>
+      <img class="socle-img" src="img/tracking.jpg" alt="Suivi de commande int&eacute;gr&eacute; aux applications internes">
+      <div class="socle-caption">Suivi de commande inject&eacute; directement dans les applications internes &mdash; utilis&eacute; au quotidien.</div>
+    </div>
+  </section>
 
-<footer class="footer">
-  <div class="container">
-    Arnaud Derhan &middot; Metz, France
-  </div>
-</footer>
+  <!-- système + méthode -->
+  <section class="duo">
+    <div>
+      <div class="eyebrow">SECOND TERRAIN</div>
+      <h2 class="duo-title">Un syst&egrave;me de pilotage multi-agent</h2>
+      <p class="duo-intro">Utilis&eacute; quotidiennement depuis Telegram&nbsp;: six domaines sp&eacute;cialis&eacute;s, m&eacute;moire structur&eacute;e, travaux planifi&eacute;s et validation par l&rsquo;usage r&eacute;el. M&ecirc;me pratique, appliqu&eacute;e &agrave; la continuit&eacute;.</p>
+      <a class="link-annexe" href="system.html">Lire l&rsquo;annexe conception &rarr;</a>
+    </div>
+    <div>
+      <div class="eyebrow">M&Eacute;THODE</div>
+      <div class="method">
+        <div class="method-row"><strong>Diagnostic</strong><span>Comprendre pourquoi un process ne tient pas dans le r&eacute;el.</span></div>
+        <div class="method-row"><strong>Racine</strong><span>Traiter la friction racine, pas le sympt&ocirc;me.</span></div>
+        <div class="method-row"><strong>Conception</strong><span>Une solution praticable avec les moyens disponibles.</span></div>
+        <div class="method-row"><strong>Robustesse</strong><span>Faire tenir l&rsquo;outil dans l&rsquo;usage, malgr&eacute; turnover et faible support.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div>
+      <div class="footer-title">L&agrave; o&ugrave; ce profil devient utile</div>
+      <div class="footer-sub">Produit vertical, configurateur, outil interne&nbsp;: partout o&ugrave; une expertise m&eacute;tier doit devenir un syst&egrave;me utilisable.</div>
+    </div>
+    <div class="footer-contact">
+      <a class="btn-primary" href="#" data-contact-href>&Eacute;changer</a>
+      <div class="footer-place">Metz, France</div>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  var user = ['arnaud', 'derhan'].join('.');
+  var domain = ['gmail', 'com'].join('.');
+  var email = user + '@' + domain;
+  document.querySelectorAll('[data-contact-href]').forEach(function (el) {
+    el.setAttribute('href', 'mailto:' + email);
+  });
+  document.querySelectorAll('[data-contact-label]').forEach(function (el) {
+    el.textContent = email;
+  });
+})();
+</script>
 
 </body>
 </html>
