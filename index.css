@@ -53,6 +53,8 @@ a:hover { opacity: 0.85; }
 .topbar-nav {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   gap: 26px;
   font-size: 13px;
   font-weight: 600;
@@ -273,10 +275,12 @@ a:hover { opacity: 0.85; }
   max-width: 520px;
 }
 
+.adoption-intro strong { color: #e9e7e1; }
+
 .adoption-stats {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px 32px;
+  grid-template-columns: 1fr;
+  gap: 6px;
   max-width: 480px;
   font-family: 'Public Sans', sans-serif;
 }
@@ -316,22 +320,30 @@ a:hover { opacity: 0.85; }
 }
 
 .lightbox {
-  width: min(94vw, 1440px);
+  width: 100vw;
+  height: 100vh;
   max-width: none;
-  padding: 0;
-  border: 1px solid #3a4150;
-  border-radius: 12px;
-  background: #0f1114;
-  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.75);
+  max-height: none;
+  margin: 0;
+  padding: 3vh 3vw;
+  border: 0;
+  background: transparent;
+  box-sizing: border-box;
 }
 
 .lightbox::backdrop { background: rgba(4, 5, 7, 0.88); }
 
 .lightbox img {
   display: block;
-  width: 100%;
-  max-height: 90vh;
+  width: auto;
+  max-width: 100%;
+  max-height: 94vh;
+  margin: auto;
   object-fit: contain;
+  border: 1px solid #3a4150;
+  border-radius: 12px;
+  background: #0f1114;
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.75);
 }
 
 .lightbox-close {
@@ -400,6 +412,11 @@ a:hover { opacity: 0.85; }
 }
 
 .socle-item strong { color: #e9e7e1; }
+
+.socle-link {
+  display: inline-flex;
+  margin-top: 22px;
+}
 
 .socle-img {
   display: block;
@@ -532,6 +549,7 @@ a:hover { opacity: 0.85; }
 
 @media (max-width: 720px) {
   .topbar { flex-direction: column; gap: 14px; align-items: flex-start; }
+  .topbar-nav { justify-content: flex-start; gap: 12px 18px; }
   .metrics { grid-template-columns: 1fr; }
   .metric:not(:last-child) { border-right: none; border-bottom: 1px solid #23272f; }
   .ranges { grid-template-columns: 1fr; }

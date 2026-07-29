@@ -20,6 +20,7 @@
     <nav class="topbar-nav">
       <a class="link-accent" href="https://casto-portes.netlify.app/?demo=portfolio#/portes" target="_blank" rel="noopener noreferrer">Portail portes &nearr;</a>
       <a class="link-accent" href="https://casto-portes.netlify.app/?demo=portfolio#/fenetres" target="_blank" rel="noopener noreferrer">Fen&ecirc;tres &nearr;</a>
+      <a class="link-accent" href="https://casto-portes.netlify.app/garde-corps.html?demo=portfolio" target="_blank" rel="noopener noreferrer">Garde-corps &nearr;</a>
       <a class="btn-contact" href="#" data-contact-href>&Eacute;changer</a>
     </nav>
   </header>
@@ -34,8 +35,8 @@
   <!-- metrics band -->
   <section class="metrics">
     <div class="metric">
-      <div class="metric-value">70</div>
-      <div class="metric-label">magasins atteints en moins d&rsquo;un mois, sans d&eacute;ploiement organis&eacute;</div>
+      <div class="metric-value" data-stat="network.stores_reached">73</div>
+      <div class="metric-label">magasins utilisateurs, sans d&eacute;ploiement organis&eacute;</div>
     </div>
     <div class="metric">
       <div class="metric-value">10&nbsp;min&nbsp;&rarr;&nbsp;5&nbsp;s</div>
@@ -66,6 +67,7 @@
       <div class="proof-links">
         <a class="link-accent" href="https://casto-portes.netlify.app/?demo=portfolio#/portes" target="_blank" rel="noopener noreferrer">Essayer les portes &nearr;</a>
         <a class="link-accent" href="https://casto-portes.netlify.app/?demo=portfolio#/fenetres" target="_blank" rel="noopener noreferrer">Essayer les fen&ecirc;tres &nearr;</a>
+        <a class="link-accent" href="https://casto-portes.netlify.app/garde-corps.html?demo=portfolio" target="_blank" rel="noopener noreferrer">Essayer le garde-corps &nearr;</a>
       </div>
     </div>
 
@@ -101,15 +103,14 @@
     <div>
       <div class="eyebrow">ADOPTION</div>
       <h2>Diffus&eacute; de vendeur &agrave; vendeur</h2>
-      <p class="adoption-intro">Aucun relais si&egrave;ge, aucune communication officielle&nbsp;: le portail s&rsquo;est transmis entre magasins parce qu&rsquo;il retire une contrainte au lieu d&rsquo;en ajouter une.</p>
+      <p class="adoption-intro">Aucun relais si&egrave;ge, aucune communication officielle&nbsp;: <strong data-stat="network.stores_reached">73</strong> magasins l&rsquo;ont ouvert, puis y sont revenus parce qu&rsquo;il retire une contrainte au lieu d&rsquo;en ajouter une.</p>
       <div class="adoption-stats">
-        <div class="stat stat-primary"><span>Magasins actifs</span><strong data-analytics="unique_stores">70</strong></div>
-        <div class="stat"><span>Navigateurs distincts</span><strong data-analytics="unique_users">549</strong></div>
-        <div class="stat"><span>Connexions</span><strong data-analytics="connections">2&nbsp;309</strong></div>
-        <div class="stat"><span>Recherches</span><strong data-analytics="searches">1&nbsp;353</strong></div>
-        <div class="stat"><span>EAN copi&eacute;s</span><strong data-analytics="ean_copies">1&nbsp;292</strong></div>
+        <div class="stat stat-primary"><span>Couverture du parc France</span><strong><span data-stat="network.coverage_percent">78</span>&nbsp;%</strong></div>
+        <div class="stat"><span>Magasins actifs sur 7 jours</span><strong data-stat="network.active_stores_7d">58</strong></div>
+        <div class="stat"><span>Magasins revenus plusieurs jours</span><strong data-stat="network.returning_stores">64</strong></div>
+        <div class="stat"><span>EAN copi&eacute;s pour commander</span><strong data-stat="actions.ean_copies">1&nbsp;700</strong></div>
       </div>
-      <div class="adoption-period" data-analytics-period>Du 30 juin au 25 juillet 2026.</div>
+      <div class="adoption-period" data-analytics-period>Du 30 juin au 29 juillet 2026 &middot; mise &agrave; jour quotidienne.</div>
     </div>
   </section>
 
@@ -118,17 +119,18 @@
     <div>
       <div class="eyebrow">LE SOCLE</div>
       <h2>Quatre ans &agrave; transformer les irritants du terrain en outils utilis&eacute;s</h2>
-      <p class="socle-intro">Avant le portail, des outils internes utilis&eacute;s chaque jour par l&rsquo;&eacute;quipe&nbsp;:</p>
+      <p class="socle-intro">Avant le portail, des outils internes en usage et d&rsquo;autres prototypes fonctionnels&nbsp;:</p>
       <div class="socle-list">
         <div class="socle-item"><span class="dash">&mdash;</span><span>suivi des devis, commandes sp&eacute;ciales et projets, avec relances&nbsp;;</span></div>
         <div class="socle-item"><span class="dash">&mdash;</span><span>devis &amp; transport pr&eacute;-remplis par API internes&nbsp;: <strong>10&nbsp;min &rarr; 5&nbsp;s</strong>&nbsp;;</span></div>
-        <div class="socle-item"><span class="dash">&mdash;</span><span>recherche dimensionnelle fen&ecirc;tres, reprise ensuite dans le portail&nbsp;;</span></div>
-        <div class="socle-item"><span class="dash">&mdash;</span><span>alertes, tableaux de bord et outils d&rsquo;&eacute;quipe.</span></div>
+        <div class="socle-item"><span class="dash">&mdash;</span><span>prototype rendant visibles et filtrables les r&eacute;f&eacute;rences provisionn&eacute;es dans DCA&nbsp;;</span></div>
+        <div class="socle-item"><span class="dash">&mdash;</span><span>Track &amp; Trace logistique, inject&eacute; dans l&rsquo;application vendeur.</span></div>
       </div>
+      <a class="link-annexe socle-link" href="castorama.html">Voir le cas Castorama complet &rarr;</a>
     </div>
     <div>
-      <img class="socle-img evidence-image" src="img/tracking.jpg" alt="Suivi de commande int&eacute;gr&eacute; aux applications internes" tabindex="0" role="button" data-enlarge>
-      <div class="socle-caption">Suivi de commande inject&eacute; directement dans les applications internes &mdash; utilis&eacute; au quotidien.</div>
+      <img class="socle-img evidence-image" src="img/tracking.jpg" alt="Prototype Track &amp; Trace int&eacute;gr&eacute; &agrave; l&rsquo;application vendeur" tabindex="0" role="button" data-enlarge>
+      <div class="socle-caption">Prototype fonctionnel Track &amp; Trace &mdash; suivi logistique inject&eacute; dans l&rsquo;application vendeur.</div>
     </div>
   </section>
 
@@ -183,12 +185,17 @@
   });
 
   var formatter = new Intl.NumberFormat('fr-FR');
+  function valueAtPath(source, path) {
+    return path.split('.').reduce(function (current, key) {
+      return current && current[key] !== undefined ? current[key] : undefined;
+    }, source);
+  }
   fetch('https://casto-portes.netlify.app/.netlify/functions/analytics?public=portfolio')
     .then(function (response) { if (!response.ok) throw new Error('analytics'); return response.json(); })
     .then(function (data) {
-      Object.keys(data.totals || {}).forEach(function (key) {
-        var node = document.querySelector('[data-analytics="' + key + '"]');
-        if (node) node.textContent = formatter.format(data.totals[key]);
+      document.querySelectorAll('[data-stat]').forEach(function (node) {
+        var value = valueAtPath(data, node.getAttribute('data-stat'));
+        if (typeof value === 'number') node.textContent = formatter.format(value);
       });
       if (data.first_seen && data.last_seen) {
         var formatDate = function (value) { return new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(value)); };
@@ -211,7 +218,15 @@
     });
   });
   lightbox.querySelector('.lightbox-close').addEventListener('click', function () { lightbox.close(); });
-  lightbox.addEventListener('click', function (event) { if (event.target === lightbox) lightbox.close(); });
+  document.addEventListener('pointerdown', function (event) {
+    if (!lightbox.open) return;
+    var imageBounds = lightboxImage.getBoundingClientRect();
+    var outsideImage = event.clientX < imageBounds.left ||
+      event.clientX > imageBounds.right ||
+      event.clientY < imageBounds.top ||
+      event.clientY > imageBounds.bottom;
+    if (outsideImage && !event.target.closest('.lightbox-close')) lightbox.close();
+  }, true);
 })();
 </script>
 
