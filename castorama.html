@@ -106,7 +106,7 @@
   <section class="section">
     <div class="section-label">Continuit&eacute; entre applications</div>
     <h2>Passer du devis au transport en quelques secondes</h2>
-    <p>J&rsquo;ai con&ccedil;u cette continuit&eacute; entre applications&nbsp;: les informations d&eacute;j&agrave; saisies sont r&eacute;cup&eacute;r&eacute;es, transform&eacute;es puis pr&eacute;remplies dans la suivante. Sur le parcours d&eacute;montr&eacute;, plusieurs minutes de ressaisie deviennent quelques secondes de transfert et de contr&ocirc;le.</p>
+    <p>J&rsquo;ai con&ccedil;u cette continuit&eacute; entre applications&nbsp;: les informations d&eacute;j&agrave; saisies dans le devis sont r&eacute;cup&eacute;r&eacute;es, transform&eacute;es puis pr&eacute;remplies dans l&rsquo;outil de transport. Sur le parcours d&eacute;montr&eacute;, une op&eacute;ration d&rsquo;environ dix minutes devient un transfert et un contr&ocirc;le d&rsquo;environ cinq secondes.</p>
     <figure class="operational-proof">
       <video controls muted playsinline preload="metadata" aria-label="Démonstration du préremplissage entre le devis et la solution de transport">
         <source src="img/devis-transport.mp4" type="video/mp4">
@@ -118,9 +118,9 @@
   <section class="section">
     <div class="section-label">Suivi logistique</div>
     <h2>Faire entrer le suivi de commande dans l&rsquo;outil d&eacute;j&agrave; ouvert</h2>
-    <p>J&rsquo;ai con&ccedil;u et int&eacute;gr&eacute; Track &amp; Trace directement dans l&rsquo;application vendeur utilis&eacute;e par l&rsquo;&eacute;quipe. Pour chaque commande suivie, l&rsquo;outil rassemble les &eacute;tapes logistiques, les lignes re&ccedil;ues, les alertes client et les prochaines actions.</p>
+    <p>J&rsquo;ai con&ccedil;u et int&eacute;gr&eacute; Track &amp; Trace directement dans l&rsquo;application vendeur de mon &eacute;quipe, qui l&rsquo;utilise au quotidien. Pour chaque commande suivie, l&rsquo;outil rassemble les &eacute;tapes logistiques, les lignes re&ccedil;ues, les alertes client et les prochaines actions.</p>
     <figure class="operational-proof">
-      <button class="proof-shot" type="button" data-lightbox-src="img/track-trace.png" data-lightbox-alt="Track & Trace intégré à l’application vendeur">
+      <button class="proof-shot" type="button" data-lightbox-src="img/track-trace.png" data-lightbox-alt="Track &amp; Trace intégré à l’application vendeur">
         <img src="img/track-trace.png" alt="Suivi de commande intégré à l’application vendeur, avec statuts d’expédition, transit et réception">
         <span>Usage quotidien <small>Agrandir</small></span>
       </button>
@@ -131,7 +131,7 @@
   <section class="section">
     <div class="section-label">Exploration fonctionnelle</div>
     <h2>Rendre exploitables les produits provisionn&eacute;s dans DCA</h2>
-    <p>J&rsquo;ai con&ccedil;u ce prototype pour rendre visibles et filtrables des r&eacute;f&eacute;rences dont la valeur de stock doit &ecirc;tre suivie, afin d&rsquo;aider au pilotage du stock, de la marge et des provisions comptables. Il a &eacute;t&eacute; pr&eacute;sent&eacute; &agrave; l&rsquo;&eacute;quipe Produit&nbsp;; il reste ici au rang de prototype fonctionnel.</p>
+    <p>J&rsquo;ai con&ccedil;u ce prototype pour rendre visibles et filtrables, dans DCA, les r&eacute;f&eacute;rences provisionn&eacute;es qui restaient difficiles &agrave; rep&eacute;rer. L&rsquo;objectif &eacute;tait de donner une lecture exploitable du stock concern&eacute;&nbsp;; il a &eacute;t&eacute; pr&eacute;sent&eacute; &agrave; l&rsquo;&eacute;quipe Produit et reste au rang de prototype fonctionnel.</p>
     <figure class="operational-proof operational-proof--compact">
       <video controls muted playsinline preload="metadata" aria-label="Démonstration du prototype pour les produits provisionnés dans DCA">
         <source src="img/dca-provisionnes.mp4" type="video/mp4">
@@ -145,7 +145,7 @@
     <div class="section-label">Arbitrages</div>
     <h2>Faire &eacute;voluer sans interrompre l&rsquo;usage</h2>
     <p>Ces outils locaux ont &eacute;t&eacute; construits au contact d&rsquo;applications internes non document&eacute;es, de sessions prot&eacute;g&eacute;es et de flux susceptibles d&rsquo;&eacute;voluer. Cette contrainte impose des solutions pragmatiques&nbsp;: isoler les d&eacute;pendances fragiles, pr&eacute;voir des contournements et faire &eacute;voluer l&rsquo;architecture sans interrompre le travail quotidien.</p>
-    <p>J&rsquo;ai notamment regroup&eacute; les scripts utilis&eacute;s par l&rsquo;&eacute;quipe dans une extension Chrome qui centralise leur installation, leur maintenance et leurs mises &agrave; jour.</p>
+    <p>J&rsquo;ai notamment regroup&eacute; l&rsquo;ensemble des scripts Tampermonkey d&eacute;j&agrave; utilis&eacute;s par l&rsquo;&eacute;quipe dans une extension Chrome. Elle ne cr&eacute;e pas un nouveau produit&nbsp;: elle transforme un ensemble de scripts &agrave; installer s&eacute;par&eacute;ment en un paquet unique, plus simple &agrave; installer, maintenir et mettre &agrave; jour.</p>
     <p>Les outils historiques sont des solutions locales maintenues pour l&rsquo;&eacute;quipe. Le portail ouvre une autre &eacute;chelle&nbsp;: une port&eacute;e mesurable entre magasins et, d&eacute;sormais, une &eacute;tude interne de faisabilit&eacute; et d&rsquo;industrialisation de son concept.</p>
     <p><strong>P&eacute;rim&egrave;tre public&nbsp;:</strong> les captures sont anonymis&eacute;es et les d&eacute;monstrations utilisent un mode portfolio sans donn&eacute;es client ni acc&egrave;s authentifi&eacute; aux applications internes. Elles montrent les parcours et les r&egrave;gles m&eacute;tier, pas les environnements de production de Castorama.</p>
   </section>
