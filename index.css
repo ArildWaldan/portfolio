@@ -292,6 +292,63 @@ a:hover { opacity: 0.85; }
 .stat span { color: #9a968a; }
 .stat strong { color: #e2a55b; }
 
+.stat-primary {
+  grid-column: 1 / -1;
+  padding: 12px 14px;
+  border: 1px solid rgba(226, 165, 91, 0.38);
+  border-radius: 6px;
+  background: rgba(226, 165, 91, 0.07);
+  font-size: 15px;
+}
+
+.stat-primary strong { font-size: 22px; }
+
+.evidence-image {
+  cursor: zoom-in;
+  transition: filter 160ms ease, transform 160ms ease;
+}
+
+.evidence-image:hover,
+.evidence-image:focus-visible {
+  filter: brightness(1.08);
+  outline: 2px solid #e2a55b;
+  outline-offset: 3px;
+}
+
+.lightbox {
+  width: min(94vw, 1440px);
+  max-width: none;
+  padding: 0;
+  border: 1px solid #3a4150;
+  border-radius: 12px;
+  background: #0f1114;
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.75);
+}
+
+.lightbox::backdrop { background: rgba(4, 5, 7, 0.88); }
+
+.lightbox img {
+  display: block;
+  width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #5d626e;
+  border-radius: 50%;
+  background: rgba(15, 17, 20, 0.88);
+  color: #e9e7e1;
+  font-size: 26px;
+  cursor: pointer;
+}
+
 .adoption-period {
   font-family: 'Public Sans', sans-serif;
   font-size: 12px;
