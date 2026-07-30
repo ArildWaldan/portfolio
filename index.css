@@ -101,12 +101,12 @@ a:hover { opacity: 0.85; }
 
 .metrics {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   border-top: 1px solid #23272f;
   border-bottom: 1px solid #23272f;
 }
 
-.metric { padding: 28px 40px 30px; }
+.metric { padding: 28px 64px 30px; }
 .metric:first-child { padding: 28px 64px 30px; }
 .metric:not(:last-child) { border-right: 1px solid #23272f; }
 

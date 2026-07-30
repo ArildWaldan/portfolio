@@ -17,10 +17,10 @@
   "subheadline": "Je transforme des règles métier complexes en outils simples, utilisés et mesurés sur le terrain.",
   "summary": "Manager retail issu de la vente de menuiserie sur mesure, je prends en charge un produit depuis le problème observé jusqu’à son usage : compréhension du métier, formalisation des règles, conception fonctionnelle, pilotage d’une implémentation assistée par IA, tests et mesure. Mes réalisations relient catalogues techniques, parcours vendeurs et systèmes existants sans ajouter de friction aux équipes.",
   "currentSignal": {
-    "label": "Signal actuel",
-    "value": "78 %",
-    "text": "du réseau France utilise déjà mon portail vendeur multi-gamme",
-    "asOf": "Données au 29 juillet 2026"
+    "label": "Produit principal",
+    "value": "Réseau France",
+    "text": "un portail vendeur multi-gamme diffusé au-delà de son magasin d’origine",
+    "asOf": "Portes · fenêtres · garde-corps"
   },
   "lenses": [
     {
@@ -60,7 +60,7 @@
       "id":"portal",
       "title":"Portail vendeur multi-gamme",
       "scope":"Produit métier · diffusion nationale mesurée",
-      "result":"73 magasins sur 94, 3 014 connexions et 1 700 codes produit copiés au 29 juillet 2026.",
+      "result":"Diffusé organiquement à l’échelle nationale, avec des usages mesurés jusqu’à la continuité vers la commande.",
       "contribution":"Observation des parcours, formalisation des règles, conception des interfaces, direction de l’implémentation assistée par IA, tests et analytics.",
       "status":"Actif et utilisé ; concept étudié pour une industrialisation interne.",
       "href":"castorama.html"
@@ -78,7 +78,7 @@
       "id":"delivery",
       "title":"Devis de livraison automatisé",
       "scope":"Intégration · automatisation inter-applications",
-      "result":"Jusqu’à plus de 10 minutes sur les gros projets ramenées à environ 5 secondes, puis contrôle.",
+      "result":"Le devis alimente directement le chiffrage transport, puis laisse au vendeur le contrôle final.",
       "contribution":"Conception d’une continuité entre l’outil de vente et le chiffrage transport.",
       "status":"Utilisé sur le terrain.",
       "href":"castorama.html"
