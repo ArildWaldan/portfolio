@@ -1,6 +1,6 @@
 # CV canonique et parcours web
 
-**Version :** 1.0 · **Date :** 2026-07-30 · **Statut :** En cours
+**Version :** 1.0 · **Date :** 2026-07-30 · **Statut :** Terminé
 
 ## Intention
 
@@ -23,9 +23,8 @@ Créer une source de vérité structurée pour le parcours d’Arnaud, puis en d
 
 ## Critères d’acceptation
 
-- [ ] Un seul fichier contient les faits de CV maintenus.
-- [ ] Le build échoue si un champ essentiel manque.
-- [ ] Les filtres changent la hiérarchie, jamais la vérité.
-- [ ] Le PDF tient sur deux pages A4 maximum et reste lisible par un ATS.
-- [ ] Les liens, la navigation mobile et l’impression sont vérifiés.
-
+- [x] Un seul fichier contient les faits de CV maintenus.
+- [x] Le build échoue si un champ essentiel manque.
+- [x] Les filtres changent la hiérarchie, jamais la vérité.
+- [x] Le PDF tient sur deux pages A4 maximum et reste lisible par un ATS.
+- [x] Les liens, la navigation mobile et l’impression sont vérifiés.
