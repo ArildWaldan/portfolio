@@ -51,7 +51,7 @@
     {"id":"ux","name":"Concevoir l’expérience","detail":"Adapter l’interface à la logique de vente plutôt qu’imposer un parcours générique."},
     {"id":"integration","name":"Relier les systèmes","detail":"Créer la continuité entre outils existants sans double saisie."},
     {"id":"specification","name":"Diriger l’implémentation","detail":"Définir l’intention et les comportements attendus pour des agents d’implémentation."},
-    {"id":"validation","name":"Vérifier le résultat","detail":"Tester les parcours, les limites et le déploiement réel, pas seulement le code produit."},
+    {"id":"validation","name":"Vérifier le résultat","detail":"Définir les preuves attendues, confronter les résultats aux sources et à l’usage réel, puis faire corriger les écarts."},
     {"id":"measurement","name":"Mesurer l’usage","detail":"Instrumenter les actions utiles et distinguer diffusion, usage et adoption."},
     {"id":"architecture","name":"Faire évoluer un système","detail":"Transformer les incidents et limites observées en décisions d’architecture."}
   ],
