@@ -921,6 +921,12 @@ ul li::before {
   border-bottom: 1px solid var(--border-subtle);
 }
 
+.back-nav .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
 .back-nav a {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 12px;

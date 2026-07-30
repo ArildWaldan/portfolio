@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arnaud Derhan — Parcours & CV</title>
+<meta name="description" content="Parcours d’Arnaud Derhan, product builder métier : conception fonctionnelle, produits terrain et implémentation assistée par IA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;family=Archivo:wght@500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="cv.css">
+</head>
+<body>
+<div class="cv-shell">
+  <header class="cv-nav">
+    <a href="index.html" class="cv-brand">AD <span>/ Arnaud Derhan</span></a>
+    <nav><a href="index.html">Portfolio</a><a href="assets/arnaud-derhan-cv.pdf" download>PDF ↓</a><a class="cv-contact" data-email-link>Échanger</a></nav>
+  </header>
+  <main>
+    <section class="cv-hero">
+      <div>
+        <p class="kicker">PARCOURS / SOURCE ACTUALISÉE</p>
+        <h1 data-headline></h1>
+        <p class="subheadline" data-subheadline></p>
+        <p class="summary" data-summary></p>
+        <div class="meta" data-contacts></div>
+      </div>
+      <aside class="signal-card"><span data-signal-label></span><strong data-signal-value></strong><p data-signal-text></p><small data-signal-date></small></aside>
+    </section>
+
+    <section class="section lens-section">
+      <div class="section-heading">
+        <div><p class="kicker">UNE PRATIQUE, TROIS ANGLES</p><h2>Ce que je sais prendre en charge</h2></div>
+        <p id="lens-intro" class="section-intro"></p>
+      </div>
+      <div class="lens-tabs" role="group" aria-label="Angle de lecture" data-lenses></div>
+      <div class="capability-grid" data-capabilities></div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div><p class="kicker">PREUVES RELIÉES</p><h2>Des capacités observables, pas une liste de mots-clés</h2></div>
+        <a href="castorama.html" class="text-link">Étude de cas complète →</a>
+      </div>
+      <div class="proof-grid" data-proofs></div>
+    </section>
+
+    <section class="section timeline-section">
+      <div class="section-heading"><div><p class="kicker">TRAJECTOIRE</p><h2>Du métier pratiqué au produit construit</h2></div></div>
+      <div class="timeline" data-experience></div>
+    </section>
+
+    <section class="section foundation">
+      <div><p class="kicker">FORMATION</p><div data-education></div></div>
+      <div><p class="kicker">LANGUES</p><div data-languages></div></div>
+      <div class="source-note"><p class="kicker">SOURCE</p><p>Cette page et le PDF sont produits depuis la même source structurée.</p><small data-updated></small></div>
+    </section>
+  </main>
+  <footer><strong data-name></strong><span data-footer-contact></span><a href="index.html">Voir les réalisations →</a></footer>
+</div>
+<script>/*__CV_DATA__*/</script>
+<script src="cv.js"></script>
+</body>
+</html>
