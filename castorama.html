@@ -36,7 +36,7 @@
       <div class="range-card"><span class="range-index">02</span><div class="name">Fen&ecirc;tres</div><div class="desc">Dimensions client, tol&eacute;rances progressives et crit&egrave;res crois&eacute;s pour identifier les r&eacute;f&eacute;rences compatibles.</div></div>
       <div class="range-card"><span class="range-index">03</span><div class="name">Garde-corps</div><div class="desc">Calcul et composition d&rsquo;un projet &agrave; partir des mesures terrain.</div></div>
     </div>
-    <p><strong>Mon r&ocirc;le&nbsp;:</strong> observation des parcours vendeurs, formalisation des r&egrave;gles de chaque gamme, conception des interfaces, direction de l&rsquo;impl&eacute;mentation et validation sur le terrain.</p>
+    <p><strong>Mon r&ocirc;le&nbsp;:</strong> observation des parcours vendeurs, formalisation des r&egrave;gles de chaque gamme, conception des interfaces, direction de l&rsquo;impl&eacute;mentation assist&eacute;e par IA et validation sur le terrain.</p>
     <p>Le parcours portes transforme les donn&eacute;es du catalogue en choix exploitables pendant la vente&nbsp;: dimensions, finitions, sens d&rsquo;ouverture, prix, code produit et continuit&eacute; vers la commande.</p>
     <figure class="product-proof product-proof-gallery">
       <div class="proof-gallery">
@@ -106,12 +106,12 @@
   <section class="section">
     <div class="section-label">Continuit&eacute; entre applications</div>
     <h2>Passer du devis au transport en quelques secondes</h2>
-    <p>J&rsquo;ai con&ccedil;u cette continuit&eacute; entre applications&nbsp;: les informations d&eacute;j&agrave; saisies dans le devis sont r&eacute;cup&eacute;r&eacute;es, transform&eacute;es puis pr&eacute;remplies dans l&rsquo;outil de transport. Sur le parcours d&eacute;montr&eacute;, une op&eacute;ration d&rsquo;environ dix minutes devient un transfert et un contr&ocirc;le d&rsquo;environ cinq secondes.</p>
+    <p>J&rsquo;ai con&ccedil;u cette continuit&eacute; entre applications&nbsp;: les informations d&eacute;j&agrave; saisies dans le devis sont r&eacute;cup&eacute;r&eacute;es, transform&eacute;es puis pr&eacute;remplies dans l&rsquo;outil de transport. Sur les gros projets, un parcours pouvant d&eacute;passer dix minutes devient un transfert et un contr&ocirc;le d&rsquo;environ cinq secondes.</p>
     <figure class="operational-proof media-compare" data-media-compare>
       <div class="compare-toolbar" role="tablist" aria-label="Comparer le parcours avant et après automatisation">
         <button class="compare-tab" type="button" role="tab" aria-selected="false" aria-controls="delivery-before" data-compare-target="before">
           <span>Avant</span>
-          <small>~ 10 min &middot; saisies successives</small>
+          <small>Jusqu&rsquo;&agrave; 10+ min sur les gros projets</small>
         </button>
         <button class="compare-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="delivery-after" data-compare-target="after">
           <span>Apr&egrave;s</span>
@@ -147,8 +147,8 @@
 
   <section class="section">
     <div class="section-label">Exploration fonctionnelle</div>
-    <h2>Rendre exploitables les produits provisionn&eacute;s dans DCA</h2>
-    <p>Des r&eacute;f&eacute;rences provisionn&eacute;es existaient dans DCA mais restaient difficiles &agrave; identifier dans le travail quotidien. J&rsquo;ai prototyp&eacute; une couche de lecture et de filtrage directement dans l&rsquo;environnement existant. Pr&eacute;sent&eacute; &agrave; l&rsquo;&eacute;quipe Produit, le prototype n&rsquo;est pas d&eacute;ploy&eacute; &agrave; ce stade.</p>
+    <h2>Rendre visibles les produits d&eacute;j&agrave; disponibles dans l&rsquo;outil de commande</h2>
+    <p>Des r&eacute;f&eacute;rences provisionn&eacute;es existaient dans DCA, l&rsquo;outil de commande interne, mais restaient difficiles &agrave; identifier dans le travail quotidien. J&rsquo;ai prototyp&eacute; une couche de lecture et de filtrage directement dans l&rsquo;environnement existant. Pr&eacute;sent&eacute; &agrave; l&rsquo;&eacute;quipe Produit, le prototype n&rsquo;est pas d&eacute;ploy&eacute; &agrave; ce stade.</p>
     <figure class="operational-proof operational-proof--compact">
       <video controls muted playsinline preload="metadata" aria-label="Démonstration du prototype pour les produits provisionnés dans DCA">
         <source src="img/dca-provisionnes.mp4" type="video/mp4">
@@ -161,7 +161,7 @@
   <section class="section">
     <div class="section-label">Arbitrages</div>
     <h2>Faire &eacute;voluer sans interrompre l&rsquo;usage</h2>
-    <p>Ces outils locaux ont &eacute;t&eacute; construits au contact d&rsquo;applications internes non document&eacute;es, de sessions prot&eacute;g&eacute;es et de flux susceptibles d&rsquo;&eacute;voluer. Cette contrainte impose des solutions pragmatiques&nbsp;: isoler les d&eacute;pendances fragiles, pr&eacute;voir des contournements et faire &eacute;voluer l&rsquo;architecture sans interrompre le travail quotidien.</p>
+    <p>Ces outils locaux d&eacute;pendent d&rsquo;applications et de flux internes susceptibles d&rsquo;&eacute;voluer. Cette contrainte impose d&rsquo;isoler les d&eacute;pendances fragiles et de faire &eacute;voluer l&rsquo;architecture sans interrompre le travail quotidien.</p>
     <p><strong>Distribution et maintenance.</strong> J&rsquo;ai regroup&eacute; l&rsquo;ensemble des scripts Tampermonkey utilis&eacute;s par l&rsquo;&eacute;quipe dans une extension Chrome unique&nbsp;: un seul paquet &agrave; installer et mettre &agrave; jour, au lieu de scripts distribu&eacute;s s&eacute;par&eacute;ment.</p>
     <p>Les outils historiques sont des solutions locales maintenues pour l&rsquo;&eacute;quipe. Le portail ouvre une autre &eacute;chelle&nbsp;: une port&eacute;e mesurable entre magasins et, d&eacute;sormais, une &eacute;tude interne de faisabilit&eacute; et d&rsquo;industrialisation de son concept.</p>
     <p><strong>P&eacute;rim&egrave;tre public&nbsp;:</strong> les captures sont anonymis&eacute;es et les d&eacute;monstrations utilisent un mode portfolio sans donn&eacute;es client ni acc&egrave;s authentifi&eacute; aux applications internes. Elles montrent les parcours et les r&egrave;gles m&eacute;tier, pas les environnements de production de Castorama.</p>
@@ -185,7 +185,7 @@
 
 <footer class="footer">
   <div class="container">
-    Arnaud Derhan &middot; Metz, France
+    Arnaud Derhan &middot; <a href="mailto:arnaud.derhan@gmail.com">arnaud.derhan@gmail.com</a> &middot; Metz, France
   </div>
 </footer>
 
