@@ -187,8 +187,12 @@
         if (typeof value === 'number') node.textContent = formatter.format(value);
       });
       var stores = valueAtPath(data, 'totals.unique_stores');
-      var coverage = document.querySelector('[data-coverage]');
-      if (typeof stores === 'number' && coverage) coverage.textContent = Math.round((stores / 94) * 100);
+      var coverage = document.querySelectorAll('[data-coverage]');
+      if (typeof stores === 'number') {
+        coverage.forEach(function (node) {
+          node.textContent = Math.round((stores / 94) * 100);
+        });
+      }
       if (data.first_seen && data.last_seen) {
         var formatDate = function (value) { return new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(value)); };
         document.querySelector('[data-analytics-period]').textContent = 'Du ' + formatDate(data.first_seen) + ' au ' + formatDate(data.last_seen) + ' · mise à jour quotidienne.';
