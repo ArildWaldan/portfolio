@@ -107,11 +107,28 @@
     <div class="section-label">Continuit&eacute; entre applications</div>
     <h2>Passer du devis au transport en quelques secondes</h2>
     <p>J&rsquo;ai con&ccedil;u cette continuit&eacute; entre applications&nbsp;: les informations d&eacute;j&agrave; saisies dans le devis sont r&eacute;cup&eacute;r&eacute;es, transform&eacute;es puis pr&eacute;remplies dans l&rsquo;outil de transport. Sur le parcours d&eacute;montr&eacute;, une op&eacute;ration d&rsquo;environ dix minutes devient un transfert et un contr&ocirc;le d&rsquo;environ cinq secondes.</p>
-    <figure class="operational-proof">
-      <video controls muted playsinline preload="metadata" aria-label="Démonstration du préremplissage entre le devis et la solution de transport">
-        <source src="img/devis-transport.mp4" type="video/mp4">
-      </video>
-      <figcaption>D&eacute;monstration anonymis&eacute;e du passage entre devis et transport.</figcaption>
+    <figure class="operational-proof media-compare" data-media-compare>
+      <div class="compare-toolbar" role="tablist" aria-label="Comparer le parcours avant et après automatisation">
+        <button class="compare-tab" type="button" role="tab" aria-selected="false" aria-controls="delivery-before" data-compare-target="before">
+          <span>Avant</span>
+          <small>~ 10 min &middot; saisies successives</small>
+        </button>
+        <button class="compare-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="delivery-after" data-compare-target="after">
+          <span>Apr&egrave;s</span>
+          <small>~ 5 s &middot; transfert + contr&ocirc;le</small>
+        </button>
+      </div>
+      <div class="compare-panel" id="delivery-before" role="tabpanel" data-compare-panel="before" hidden>
+        <video controls muted playsinline preload="metadata" aria-label="Ancien parcours manuel entre le devis et la solution de transport">
+          <source src="img/devis-transport-avant.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="compare-panel is-active" id="delivery-after" role="tabpanel" data-compare-panel="after">
+        <video controls muted playsinline preload="metadata" aria-label="Parcours automatisé entre le devis et la solution de transport">
+          <source src="img/devis-transport.mp4" type="video/mp4">
+        </video>
+      </div>
+      <figcaption>Deux parcours anonymis&eacute;s, au m&ecirc;me endroit&nbsp;: la ressaisie manuelle d&rsquo;origine et la continuit&eacute; automatis&eacute;e.</figcaption>
     </figure>
   </section>
 
@@ -226,6 +243,28 @@
       event.clientY > imageBounds.bottom;
     if (outsideImage && !event.target.closest('.lightbox-close')) lightbox.close();
   }, true);
+
+  document.querySelectorAll('[data-media-compare]').forEach((compare) => {
+    const tabs = Array.from(compare.querySelectorAll('[data-compare-target]'));
+    const panels = Array.from(compare.querySelectorAll('[data-compare-panel]'));
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        const target = tab.dataset.compareTarget;
+        tabs.forEach((item) => {
+          const active = item === tab;
+          item.classList.toggle('is-active', active);
+          item.setAttribute('aria-selected', String(active));
+        });
+        panels.forEach((panel) => {
+          const active = panel.dataset.comparePanel === target;
+          panel.hidden = !active;
+          panel.classList.toggle('is-active', active);
+          if (!active) panel.querySelector('video')?.pause();
+        });
+      });
+    });
+  });
 </script>
 </body>
 </html>
