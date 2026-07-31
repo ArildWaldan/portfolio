@@ -171,6 +171,7 @@
     }
   ],
   "education": [
+    {"year":"2022","school":"DEOMA Formation","degree":"CQP Conseiller de vente en magasin de bricolage"},
     {"year":"2016","school":"Université Lumière Lyon 2","degree":"Master Musiques appliquées aux arts visuels"},
     {"year":"2014","school":"Conservatoire de Metz","degree":"3e cycle — orchestration & écriture"}
   ],
