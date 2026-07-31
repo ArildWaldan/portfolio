@@ -56,11 +56,13 @@ body {
 
 .portrait-print {
   width: 25mm;
-  height: 25mm;
+  height: 31mm;
   margin-bottom: 2.4mm;
-  border-radius: 50%;
+  border: 1px solid var(--line);
+  border-radius: 1.6mm;
   object-fit: cover;
   object-position: 50% 36%;
+  filter: saturate(.9);
 }
 
 .document-label {
