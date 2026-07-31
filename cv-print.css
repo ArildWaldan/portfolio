@@ -54,14 +54,22 @@ body {
   justify-content: space-between;
 }
 
-.portrait-print {
+.portrait-frame {
   width: 57mm;
   height: 25mm;
   margin-bottom: 2.4mm;
+  overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 1.6mm;
+}
+
+.portrait-print {
+  width: 100%;
+  height: 100%;
+  display: block;
   object-fit: cover;
-  object-position: 50% 44%;
+  object-position: 42% 45%;
+  transform: scale(1.22);
   filter: saturate(.9);
 }
 
