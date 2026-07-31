@@ -68,8 +68,8 @@ body {
   height: 100%;
   display: block;
   object-fit: cover;
-  object-position: 42% 45%;
-  transform: scale(1.22);
+  object-position: 50% 48%;
+  transform: none;
   filter: saturate(.9);
 }
 
