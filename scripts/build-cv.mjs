@@ -34,4 +34,4 @@ await writeFile(resolve(root, 'cv.html'), output);
 const printOutput = printTemplate.replace('/*__CV_DATA__*/', `window.CV_DATA = ${JSON.stringify(data).replaceAll('<', '\\u003c')};`);
 if (printOutput === printTemplate) throw new Error('Marqueur de données PDF introuvable');
 await writeFile(resolve(root, 'cv-print.html'), printOutput);
-console.log(`cv.html et cv-print.html générés — ${data.meta.version}`);
+console.log('cv.html et cv-print.html générés');

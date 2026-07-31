@@ -9,7 +9,6 @@
   set('[data-subheadline]', data.subheadline);
   set('[data-summary]', data.summary);
   set('[data-name]', data.identity.name);
-  set('[data-updated]', 'Mise à jour : ' + data.meta.lastUpdated);
   set('[data-footer-contact]', data.identity.location + ' · ' + data.identity.email);
 
   [[data.identity.location], [data.identity.email, 'mailto:' + data.identity.email]].forEach(function (entry) {
