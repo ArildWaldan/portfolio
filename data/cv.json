@@ -17,20 +17,36 @@
   "summary": "Manager retail en menuiserie et bâti intérieur, avec une pratique directe de la vente de projets sur mesure, je prends en charge un produit depuis le problème observé jusqu’à son usage : compréhension du métier, formalisation des règles, conception fonctionnelle, pilotage de réalisations assistées par IA, tests et mesure. Mes réalisations relient catalogues techniques, parcours vendeurs et systèmes existants sans ajouter de friction aux équipes.",
   "pdf": {
     "title": "Conception fonctionnelle · Produits configurables · Outils de vente",
-    "profile": "Manager d’un rayon menuiserie et bâti intérieur chez Castorama, je travaille au contact de gammes techniques, de ventes sur mesure et de parcours vendeurs complexes. Depuis quatre ans, je transforme les frictions observées en outils : formalisation de règles métier, conception fonctionnelle, tests, mise en service et suivi des usages.",
-    "proofs": [
-      {"value":"74 magasins","label":"atteints en un mois, sans déploiement organisé"},
-      {"value":"3 gammes","label":"portes, fenêtres et garde-corps"},
-      {"value":"10 min → 5 s","label":"sur un gros devis de livraison"}
+    "profile": "Manager d’un rayon menuiserie et bâti intérieur chez Castorama, j’accompagne au quotidien des ventes techniques et des projets sur mesure. Je transforme aussi les frictions du terrain en outils utiles : formalisation des règles métier, conception fonctionnelle, pilotage de réalisations assistées par IA, tests et mise en service.",
+    "domains": [
+      "Menuiserie sur mesure",
+      "Portails et portillons",
+      "Protection solaire",
+      "Catalogues, options et chiffrage"
     ],
     "skills": [
-      "Catalogues, règles, tolérances et compatibilités",
-      "Parcours vendeurs et conception fonctionnelle",
-      "Tests, mise en service et mesure d’usage",
+      "Formalisation de règles métier",
+      "Conception fonctionnelle et parcours vendeurs",
+      "Prototypage, tests et itérations",
       "Continuité entre outils et automatisation",
-      "Suivi de projet et relation utilisateurs"
+      "Mesure d’usage et relation utilisateurs",
+      "Cadrage, priorisation et mise en service"
     ],
-    "tools": "Excel · Google Sheets · API / JSON · Tampermonkey · Glide",
+    "tools": "Excel · Google Sheets · Glide · API / JSON · Tampermonkey · GitHub · Netlify",
+    "certifications": [
+      {
+        "name":"TOEFL iBT",
+        "level":"110 / 120 · 5,5 / 6 · C1",
+        "score":5.5,
+        "scaleMax":6,
+        "detail":[
+          {"label":"Reading","score":"6 / 6"},
+          {"label":"Listening","score":"6 / 6"},
+          {"label":"Speaking","score":"5 / 6"},
+          {"label":"Writing","score":"5,5 / 6"}
+        ]
+      }
+    ],
     "portfolioLabel": "Cas détaillés, captures et démarche de conception"
   },
   "lenses": [
@@ -116,9 +132,11 @@
         "Maintenance et évolution d’outils de suivi commercial, logistique et d’aide à la vente."
       ],
       "paperHighlights":[
-        "Management opérationnel de 3 à 7 collaborateurs, merchandising, stocks et activité commerciale.",
-        "Conception et mise en ligne d’un portail vendeur pour trois gammes aux logiques distinctes.",
-        "74 magasins atteints en un mois ; présentation à des interlocuteurs Marché et Produit ; étude de faisabilité et d’industrialisation du concept."
+        "Management opérationnel de 3 à 7 collaborateurs ; organisation de l’activité, accompagnement de l’équipe, merchandising et stocks.",
+        "Pilotage quotidien de l’activité : priorités commerciales, répartition des tâches, tenue du rayon et résolution des aléas.",
+        "Conception et mise en service d’outils d’aide à la vente et de suivi à partir des irritants observés en magasin.",
+        "Portail vendeur pour trois gammes aux logiques distinctes, diffusé à l’échelle nationale sans déploiement organisé.",
+        "Présentation à des interlocuteurs Marché et Produit ; étude de faisabilité et d’industrialisation du concept engagée par Castorama."
       ]
     },
     {
@@ -132,18 +150,24 @@
         "Développement progressif d’une pratique produit autonome à partir des irritants du terrain."
       ],
       "paperHighlights":[
-        "Vente, chiffrage et suivi de projets clients à partir de catalogues techniques, options et contraintes de compatibilité.",
-        "Création d’un portefeuille devis et commandes partagé, sans double saisie.",
-        "Automatisation du devis de livraison : plus de 10 minutes ramenées à environ 5 secondes sur les gros projets."
+        "Vente, chiffrage et suivi de projets de menuiserie sur mesure, portails, portillons et protection solaire.",
+        "Lecture de catalogues techniques, qualification des mesures, options et compatibilités, puis préparation de commandes exploitables.",
+        "Conseil client de la découverte du besoin au suivi après-vente, en lien avec fournisseurs, poseurs et services internes.",
+        "Création d’un portefeuille partagé pour suivre devis, commandes, relances et historique sans double saisie.",
+        "Automatisation du devis de livraison : plus de 10 minutes ramenées à environ 5 secondes sur les projets importants."
       ]
     },
     {
       "organization":"Activité indépendante — France",
       "role":"Compositeur & sound designer",
       "period":"2013 — 2020",
-      "summary":"Composition, arrangement et production pour des projets audiovisuels ; conduite de projets créatifs de la demande à la livraison.",
+      "summary":"Composition, arrangement et production pour des projets audiovisuels ; cadrage de la demande, échanges clients, itérations et livraison.",
       "highlights":[],
-      "paperHighlights":[]
+      "paperHighlights":[
+        "Cadrage des besoins créatifs et techniques avec les commanditaires, proposition d’une direction et planification des livrables.",
+        "Production autonome de la conception à la livraison : composition, orchestration, enregistrement, montage et mixage.",
+        "Gestion simultanée de projets, cycles de retours et ajustements jusqu’à validation finale."
+      ]
     }
   ],
   "education": [
@@ -152,6 +176,6 @@
   ],
   "languages": [
     {"name":"Français","level":"Langue maternelle"},
-    {"name":"Anglais","level":"TOEFL iBT 5,5/6 — C1"}
+    {"name":"Anglais","level":"Usage professionnel courant"}
   ]
 }

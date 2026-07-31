@@ -24,17 +24,6 @@
   portfolio.textContent = data.identity.portfolio.replace(/^https?:\/\//, '').replace(/\/$/, '');
   portfolio.href = data.identity.portfolio;
 
-  data.pdf.proofs.forEach(function (proof) {
-    var node = document.createElement('div');
-    node.className = 'proof';
-    var value = document.createElement('strong');
-    value.textContent = proof.value;
-    var label = document.createElement('span');
-    label.textContent = proof.label;
-    node.append(value, label);
-    $('[data-pdf-proofs]').appendChild(node);
-  });
-
   data.experience.forEach(function (experience) {
     var article = document.createElement('article');
     article.className = 'experience-item';
@@ -69,10 +58,15 @@
     $('[data-experience]').appendChild(article);
   });
 
-  data.pdf.skills.forEach(function (skill) {
-    var item = document.createElement('li');
-    item.textContent = skill;
-    $('[data-pdf-skills]').appendChild(item);
+  [
+    [data.pdf.domains, '[data-pdf-domains]'],
+    [data.pdf.skills, '[data-pdf-skills]']
+  ].forEach(function (entry) {
+    entry[0].forEach(function (label) {
+      var item = document.createElement('li');
+      item.textContent = label;
+      $(entry[1]).appendChild(item);
+    });
   });
 
   data.education.forEach(function (education) {
@@ -95,5 +89,23 @@
     level.textContent = language.level;
     item.append(name, level);
     $('[data-languages]').appendChild(item);
+  });
+
+  (data.pdf.certifications || []).forEach(function (certification) {
+    var item = document.createElement('div');
+    item.className = 'sidebar-item certification-item';
+    var name = document.createElement('strong');
+    name.textContent = certification.name;
+    var level = document.createElement('span');
+    level.textContent = certification.level;
+    item.append(name, level);
+    if (certification.score) {
+      var scale = document.createElement('div');
+      scale.className = 'paper-score-scale';
+      scale.setAttribute('aria-label', 'Score ' + certification.score + ' sur ' + certification.scaleMax);
+      scale.innerHTML = '<i style="--score:' + ((certification.score / certification.scaleMax) * 100) + '%"></i><b>A1</b><b>A2</b><b>B1</b><b>B2</b><b>C1</b><b>C2</b>';
+      item.appendChild(scale);
+    }
+    $('[data-certifications]').appendChild(item);
   });
 })();

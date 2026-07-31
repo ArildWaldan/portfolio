@@ -50,6 +50,12 @@
   });
   $('[data-education]').innerHTML = data.education.map(function (x) { return '<div class="foundation-item"><strong>' + x.degree + '</strong><span>' + x.school + ' · ' + x.year + '</span></div>'; }).join('');
   $('[data-languages]').innerHTML = data.languages.map(function (x) { return '<div class="foundation-item"><strong>' + x.name + '</strong><span>' + x.level + '</span></div>'; }).join('');
+  (data.pdf.certifications || []).forEach(function (certification) {
+    var details = document.createElement('details');
+    details.className = 'language-proof';
+    details.innerHTML = '<summary><span><strong>' + certification.name + '</strong><small>' + certification.level + '</small></span><span class="score-scale" aria-label="Score 5,5 sur 6, niveau C1"><i style="--score:' + ((certification.score / certification.scaleMax) * 100) + '%"></i><b>A1</b><b>A2</b><b>B1</b><b>B2</b><b>C1</b><b>C2</b></span><em>Voir le détail</em></summary><div class="score-detail">' + (certification.detail || []).map(function (item) { return '<span><small>' + item.label + '</small><strong>' + item.score + '</strong></span>'; }).join('') + '</div>';
+    $('[data-web-certifications]').appendChild(details);
+  });
 
   function activate(id) {
     var lens = data.lenses.find(function (x) { return x.id === id; }) || data.lenses[0];
