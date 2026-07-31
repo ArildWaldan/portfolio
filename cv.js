@@ -8,15 +8,11 @@
   set('[data-headline]', data.headline);
   set('[data-subheadline]', data.subheadline);
   set('[data-summary]', data.summary);
-  set('[data-signal-label]', data.currentSignal.label);
-  set('[data-signal-value]', data.currentSignal.value);
-  set('[data-signal-text]', data.currentSignal.text);
-  set('[data-signal-date]', data.currentSignal.asOf);
   set('[data-name]', data.identity.name);
   set('[data-updated]', 'Mise à jour : ' + data.meta.lastUpdated);
   set('[data-footer-contact]', data.identity.location + ' · ' + data.identity.email);
 
-  [[data.identity.location], [data.identity.email, 'mailto:' + data.identity.email], ['LinkedIn', data.identity.linkedin]].forEach(function (entry) {
+  [[data.identity.location], [data.identity.email, 'mailto:' + data.identity.email]].forEach(function (entry) {
     var n = entry[1] ? document.createElement('a') : document.createElement('span');
     n.textContent = entry[0];
     if (entry[1]) n.href = entry[1];

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arnaud Derhan — CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;family=Archivo:wght@500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="cv-print.css">
+</head>
+<body>
+<main class="paper">
+  <header class="identity">
+    <div class="identity-main">
+      <p class="document-label">CURRICULUM VITAE</p>
+      <h1 data-name></h1>
+      <p class="target-title" data-pdf-title></p>
+      <p class="profile" data-pdf-profile></p>
+    </div>
+    <address class="contacts" data-contacts></address>
+  </header>
+
+  <section class="proof-strip" data-pdf-proofs aria-label="Repères de réalisations"></section>
+
+  <div class="content-grid">
+    <section class="experience">
+      <h2>Expérience</h2>
+      <div data-experience></div>
+    </section>
+
+    <aside class="sidebar">
+      <section>
+        <h2>Compétences</h2>
+        <ul class="plain-list" data-pdf-skills></ul>
+      </section>
+      <section>
+        <h2>Environnements</h2>
+        <p class="compact-copy" data-pdf-tools></p>
+      </section>
+      <section>
+        <h2>Formation</h2>
+        <div data-education></div>
+      </section>
+      <section>
+        <h2>Langues</h2>
+        <div data-languages></div>
+      </section>
+    </aside>
+  </div>
+
+  <footer class="portfolio-callout">
+    <div>
+      <strong data-pdf-portfolio-label></strong>
+      <span>Portail multi-gamme, outils de vente et système de pilotage.</span>
+    </div>
+    <a data-portfolio-link></a>
+  </footer>
+</main>
+<script>/*__CV_DATA__*/</script>
+<script src="cv-print.js"></script>
+</body>
+</html>

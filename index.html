@@ -19,7 +19,7 @@
     <div class="topbar-id">AD &mdash; <span>Arnaud Derhan</span> &middot; Metz</div>
     <nav class="topbar-nav">
       <a href="cv.html">Parcours &amp; CV</a>
-      <a class="link-accent" href="https://casto-portes.netlify.app/?demo=portfolio" target="_blank" rel="noopener noreferrer">Voir le portail &nearr;</a>
+      <a class="link-accent" href="castorama.html">Cas Castorama &rarr;</a>
       <a class="btn-contact" href="mailto:arnaud.derhan@gmail.com" data-contact-href>&Eacute;changer avec Arnaud</a>
     </nav>
   </header>
@@ -28,18 +28,18 @@
   <section class="hero">
     <div class="kicker">TERRAIN &rarr; R&Egrave;GLES &rarr; OUTIL &rarr; USAGE</div>
     <h1>Construire ce qui manque.</h1>
-    <p>Manager retail, je con&ccedil;ois des produits m&eacute;tier de bout en bout&nbsp;: du probl&egrave;me observ&eacute; sur le terrain jusqu&rsquo;&agrave; l&rsquo;outil utilis&eacute;, mesur&eacute; et maintenu.</p>
+    <p>Manager retail dans l&rsquo;univers de la menuiserie et du b&acirc;ti int&eacute;rieur, je con&ccedil;ois des produits m&eacute;tier de bout en bout&nbsp;: du probl&egrave;me observ&eacute; sur le terrain jusqu&rsquo;&agrave; l&rsquo;outil utilis&eacute;, mesur&eacute; et maintenu.</p>
   </section>
 
   <!-- metrics band -->
   <section class="metrics">
     <div class="metric">
-      <div class="metric-value"><span data-coverage>78</span>&nbsp;%</div>
-      <div class="metric-label">du r&eacute;seau France utilise d&eacute;j&agrave; mon portail vendeur multi-gamme</div>
+      <div class="metric-value"><span data-stat="totals.unique_stores">74</span></div>
+      <div class="metric-label">magasins atteints en un mois, sans d&eacute;ploiement organis&eacute;</div>
     </div>
     <div class="metric">
-      <div class="metric-value">~ 90&nbsp;%</div>
-      <div class="metric-label">de temps gagn&eacute; sur chaque devis de livraison</div>
+      <div class="metric-value">10&nbsp;min &rarr; 5&nbsp;s</div>
+      <div class="metric-label">sur un gros devis de livraison, contr&ocirc;le final compris</div>
     </div>
   </section>
 
@@ -115,7 +115,7 @@
       <div class="eyebrow">LABORATOIRE D&rsquo;ARCHITECTURE FONCTIONNELLE</div>
       <h2 class="duo-title">Un syst&egrave;me multi-agent utilis&eacute; au quotidien</h2>
       <p class="duo-intro">Six domaines sp&eacute;cialis&eacute;s, m&eacute;moire &agrave; la demande, traitements planifi&eacute;s et validation s&eacute;par&eacute;e des r&eacute;sultats.</p>
-      <a class="link-annexe" href="system.html">Voir le second cas &rarr;</a>
+      <a class="link-annexe" href="system.html">Voir la m&eacute;thode d&rsquo;architecture et de validation &rarr;</a>
     </div>
   </section>
 
@@ -123,7 +123,7 @@
   <footer class="footer">
     <div>
       <div class="footer-title">L&agrave; o&ugrave; ce profil devient utile</div>
-      <div class="footer-sub">Produit vertical, configurateur, outil interne&nbsp;: partout o&ugrave; une expertise m&eacute;tier doit devenir un syst&egrave;me utilisable.</div>
+      <div class="footer-sub">L&agrave; o&ugrave; une r&egrave;gle produit complexe doit devenir un parcours vendeur simple, connect&eacute; et mesurable.</div>
     </div>
     <div class="footer-contact">
       <a class="btn-primary" href="mailto:arnaud.derhan@gmail.com" data-contact-href>&Eacute;changer avec Arnaud</a>
@@ -163,13 +163,6 @@
         var value = valueAtPath(data, node.getAttribute('data-stat'));
         if (typeof value === 'number') node.textContent = formatter.format(value);
       });
-      var stores = valueAtPath(data, 'totals.unique_stores');
-      var coverage = document.querySelectorAll('[data-coverage]');
-      if (typeof stores === 'number') {
-        coverage.forEach(function (node) {
-          node.textContent = Math.round((stores / 94) * 100);
-        });
-      }
       if (data.first_seen && data.last_seen) {
         var formatDate = function (value) { return new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(value)); };
         document.querySelector('[data-analytics-period]').textContent = 'Du ' + formatDate(data.first_seen) + ' au ' + formatDate(data.last_seen) + ' · mise à jour quotidienne.';

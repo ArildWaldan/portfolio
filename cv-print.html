@@ -3,61 +3,61 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arnaud Derhan — Parcours & CV</title>
-<meta name="description" content="Parcours d’Arnaud Derhan, product builder métier : conception fonctionnelle, produits terrain et implémentation assistée par IA.">
+<title>Arnaud Derhan — CV</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;family=Archivo:wght@500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="cv.css">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;family=Archivo:wght@500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="cv-print.css">
 </head>
 <body>
-<div class="cv-shell">
-  <header class="cv-nav">
-    <a href="index.html" class="cv-brand">AD <span>/ Arnaud Derhan</span></a>
-    <nav><a href="index.html">Portfolio</a><a href="assets/arnaud-derhan-cv.pdf" download>PDF ↓</a><a class="cv-contact" data-email-link>Échanger</a></nav>
+<main class="paper">
+  <header class="identity">
+    <div class="identity-main">
+      <p class="document-label">CURRICULUM VITAE</p>
+      <h1 data-name></h1>
+      <p class="target-title" data-pdf-title></p>
+      <p class="profile" data-pdf-profile></p>
+    </div>
+    <address class="contacts" data-contacts></address>
   </header>
-  <main>
-    <section class="cv-hero">
-      <div>
-        <p class="kicker">PARCOURS / SOURCE ACTUALISÉE</p>
-        <h1 data-headline></h1>
-        <p class="subheadline" data-subheadline></p>
-        <p class="summary" data-summary></p>
-        <div class="meta" data-contacts></div>
-      </div>
+
+  <section class="proof-strip" data-pdf-proofs aria-label="Repères de réalisations"></section>
+
+  <div class="content-grid">
+    <section class="experience">
+      <h2>Expérience</h2>
+      <div data-experience></div>
     </section>
 
-    <section class="section lens-section">
-      <div class="section-heading">
-        <div><p class="kicker">UNE PRATIQUE, TROIS ANGLES</p><h2>Ce que je sais prendre en charge</h2></div>
-        <p id="lens-intro" class="section-intro"></p>
-      </div>
-      <div class="lens-tabs" role="group" aria-label="Angle de lecture" data-lenses></div>
-      <div class="capability-grid" data-capabilities></div>
-    </section>
+    <aside class="sidebar">
+      <section>
+        <h2>Compétences</h2>
+        <ul class="plain-list" data-pdf-skills></ul>
+      </section>
+      <section>
+        <h2>Environnements</h2>
+        <p class="compact-copy" data-pdf-tools></p>
+      </section>
+      <section>
+        <h2>Formation</h2>
+        <div data-education></div>
+      </section>
+      <section>
+        <h2>Langues</h2>
+        <div data-languages></div>
+      </section>
+    </aside>
+  </div>
 
-    <section class="section">
-      <div class="section-heading">
-        <div><p class="kicker">PREUVES RELIÉES</p><h2>Des capacités observables, pas une liste de mots-clés</h2></div>
-        <a href="castorama.html" class="text-link">Étude de cas complète →</a>
-      </div>
-      <div class="proof-grid" data-proofs></div>
-    </section>
-
-    <section class="section timeline-section">
-      <div class="section-heading"><div><p class="kicker">TRAJECTOIRE</p><h2>Du métier pratiqué au produit construit</h2></div></div>
-      <div class="timeline" data-experience></div>
-    </section>
-
-    <section class="section foundation">
-      <div><p class="kicker">FORMATION</p><div data-education></div></div>
-      <div><p class="kicker">LANGUES</p><div data-languages></div></div>
-      <div class="source-note"><p class="kicker">SOURCE</p><p>Cette page et le PDF sont produits depuis la même source structurée.</p><small data-updated></small></div>
-    </section>
-  </main>
-  <footer><strong data-name></strong><span data-footer-contact></span><a href="index.html">Voir les réalisations →</a></footer>
-</div>
+  <footer class="portfolio-callout">
+    <div>
+      <strong data-pdf-portfolio-label></strong>
+      <span>Portail multi-gamme, outils de vente et système de pilotage.</span>
+    </div>
+    <a data-portfolio-link></a>
+  </footer>
+</main>
 <script>window.CV_DATA = {"meta":{"version":"2026-07-31","lastUpdated":"31 juillet 2026","sourcePdf":"Arnaud Derhan CV FR linked.pdf — 4 décembre 2025","position":"Product builder métier utilisant l’IA comme capacité d’implémentation"},"identity":{"name":"Arnaud Derhan","location":"Metz, France","phone":"+33 (0)6 11 57 43 21","email":"arnaud.derhan@gmail.com","portfolio":"https://arildwaldan.github.io/portfolio/"},"headline":"Product builder métier","subheadline":"Je transforme des règles métier complexes en outils simples, utilisés et mesurés sur le terrain.","summary":"Manager retail en menuiserie et bâti intérieur, avec une pratique directe de la vente de projets sur mesure, je prends en charge un produit depuis le problème observé jusqu’à son usage : compréhension du métier, formalisation des règles, conception fonctionnelle, pilotage de réalisations assistées par IA, tests et mesure. Mes réalisations relient catalogues techniques, parcours vendeurs et systèmes existants sans ajouter de friction aux équipes.","pdf":{"title":"Conception fonctionnelle · Produits configurables · Outils de vente","profile":"Manager d’un rayon menuiserie et bâti intérieur chez Castorama, je travaille au contact de gammes techniques, de ventes sur mesure et de parcours vendeurs complexes. Depuis quatre ans, je transforme les frictions observées en outils : formalisation de règles métier, conception fonctionnelle, tests, mise en service et suivi des usages.","proofs":[{"value":"74 magasins","label":"atteints en un mois, sans déploiement organisé"},{"value":"3 gammes","label":"portes, fenêtres et garde-corps"},{"value":"10 min → 5 s","label":"sur un gros devis de livraison"}],"skills":["Catalogues, règles, tolérances et compatibilités","Parcours vendeurs et conception fonctionnelle","Tests, mise en service et mesure d’usage","Continuité entre outils et automatisation","Suivi de projet et relation utilisateurs"],"tools":"Excel · Google Sheets · API / JSON · Tampermonkey · Glide","portfolioLabel":"Cas détaillés, captures et démarche de conception"},"lenses":[{"id":"product","label":"Produit métier","intro":"Partir du travail réel, choisir le bon niveau de solution, livrer puis observer l’usage.","accentCapabilities":["discovery","ux","measurement"],"accentProofs":["portal","crm"]},{"id":"functional","label":"Conception fonctionnelle","intro":"Transformer catalogues, tolérances et processus en règles explicites et interfaces actionnables.","accentCapabilities":["rules","integration","ux"],"accentProofs":["portal","delivery"]},{"id":"ai","label":"Pilotage par l’IA","intro":"Spécifier l’intention, diriger l’implémentation, tester les résultats et faire évoluer le système.","accentCapabilities":["specification","validation","architecture"],"accentProofs":["agents","portal"]}],"capabilities":[{"id":"discovery","name":"Comprendre le travail réel","detail":"Observer les irritants, les gestes existants et les contraintes d’adoption."},{"id":"rules","name":"Formaliser les règles métier","detail":"Rendre explicites catalogues, tolérances, compatibilités et états de processus."},{"id":"ux","name":"Concevoir l’expérience","detail":"Adapter l’interface à la logique de vente plutôt qu’imposer un parcours générique."},{"id":"integration","name":"Relier les systèmes","detail":"Créer la continuité entre outils existants sans double saisie."},{"id":"specification","name":"Diriger l’implémentation","detail":"Définir l’intention et les comportements attendus pour des agents d’implémentation."},{"id":"validation","name":"Tester et corriger les résultats","detail":"Essayer les outils et livrables produits avec l’IA, repérer les erreurs de contenu ou de comportement, puis piloter leur correction."},{"id":"measurement","name":"Mesurer l’usage","detail":"Instrumenter les actions utiles et distinguer diffusion, usage et adoption."},{"id":"architecture","name":"Faire évoluer un système","detail":"Transformer les incidents et limites observées en décisions d’architecture."}],"proofs":[{"id":"portal","title":"Portail vendeur multi-gamme","scope":"Produit métier · diffusion nationale mesurée","result":"Diffusé organiquement à l’échelle nationale, avec des recherches, consultations de modèles et copies de codes produit mesurées.","contribution":"Observation des parcours, formalisation des règles, conception des interfaces, direction de l’implémentation assistée par IA, tests et analytics.","status":"Actif et utilisé ; concept étudié pour une industrialisation interne.","href":"castorama.html"},{"id":"crm","title":"Portefeuille devis & commandes","scope":"Outil d’équipe · continuité commerciale","result":"Les dossiers issus des outils de vente deviennent un portefeuille partagé, sans double saisie.","contribution":"Conception et mise en service d’un suivi des statuts, montants, historiques et prochaines relances.","status":"Fonctionnel et utilisé.","href":"castorama.html"},{"id":"delivery","title":"Devis de livraison automatisé","scope":"Intégration · automatisation inter-applications","result":"Le devis alimente directement le chiffrage transport, puis laisse au vendeur le contrôle final.","contribution":"Conception d’une continuité entre l’outil de vente et le chiffrage transport.","status":"Utilisé sur le terrain.","href":"castorama.html"},{"id":"agents","title":"Système multi-agent personnel","scope":"Architecture fonctionnelle · usage quotidien","result":"Six domaines spécialisés, mémoire à la demande, traitements planifiés et validation séparée des résultats.","contribution":"Conception du système, des flux, des sources de vérité et des mécanismes de reprise après incident.","status":"Système personnel en production quotidienne.","href":"system.html"}],"experience":[{"organization":"Castorama — Jouy-aux-Arches","role":"Chef de rayon menuiserie","period":"Janvier 2025 — aujourd’hui","summary":"Organisation opérationnelle du rayon, management d’équipe, merchandising, stocks et activité commerciale. En parallèle, conception de produits métier issus des situations réelles de vente.","highlights":["Conception d’un portail vendeur couvrant portes, fenêtres et garde-corps, diffusé organiquement dans le réseau France.","Présentation du portail à des interlocuteurs Marché et Produit ; son concept fait l’objet d’une étude de faisabilité et d’industrialisation.","Maintenance et évolution d’outils de suivi commercial, logistique et d’aide à la vente."],"paperHighlights":["Management opérationnel de 3 à 7 collaborateurs, merchandising, stocks et activité commerciale.","Conception et mise en ligne d’un portail vendeur pour trois gammes aux logiques distinctes.","74 magasins atteints en un mois ; présentation à des interlocuteurs Marché et Produit ; étude de faisabilité et d’industrialisation du concept."]},{"organization":"Castorama — Jouy-aux-Arches","role":"Conseiller de vente","period":"Novembre 2021 — janvier 2025","summary":"Vente de projets de menuiserie et de solutions sur mesure ; découverte directe des contraintes clients, catalogues techniques et parcours vendeurs.","highlights":["Création d’un portefeuille devis et commandes sans double saisie.","Automatisation du devis de livraison et conception d’outils de recherche produit.","Développement progressif d’une pratique produit autonome à partir des irritants du terrain."],"paperHighlights":["Vente, chiffrage et suivi de projets clients à partir de catalogues techniques, options et contraintes de compatibilité.","Création d’un portefeuille devis et commandes partagé, sans double saisie.","Automatisation du devis de livraison : plus de 10 minutes ramenées à environ 5 secondes sur les gros projets."]},{"organization":"Activité indépendante — France","role":"Compositeur & sound designer","period":"2013 — 2020","summary":"Composition, arrangement et production pour des projets audiovisuels ; conduite de projets créatifs de la demande à la livraison.","highlights":[],"paperHighlights":[]}],"education":[{"year":"2016","school":"Université Lumière Lyon 2","degree":"Master Musiques appliquées aux arts visuels"},{"year":"2014","school":"Conservatoire de Metz","degree":"3e cycle — orchestration & écriture"}],"languages":[{"name":"Français","level":"Langue maternelle"},{"name":"Anglais","level":"TOEFL iBT 5,5/6 — C1"}]};</script>
-<script src="cv.js"></script>
+<script src="cv-print.js"></script>
 </body>
 </html>
