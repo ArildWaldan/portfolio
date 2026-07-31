@@ -34,8 +34,8 @@
   <!-- metrics band -->
   <section class="metrics">
     <div class="metric">
-      <div class="metric-value"><span data-stat="totals.unique_stores">74</span></div>
-      <div class="metric-label">magasins atteints en un mois, sans d&eacute;ploiement organis&eacute;</div>
+      <div class="metric-value"><span data-stat-percent="totals.unique_stores" data-stat-denominator="94">79&nbsp;%</span></div>
+      <div class="metric-label">du r&eacute;seau France atteint sans d&eacute;ploiement organis&eacute;</div>
     </div>
     <div class="metric">
       <div class="metric-value">10&nbsp;min &rarr; 5&nbsp;s</div>
@@ -153,6 +153,13 @@
       document.querySelectorAll('[data-stat]').forEach(function (node) {
         var value = valueAtPath(data, node.getAttribute('data-stat'));
         if (typeof value === 'number') node.textContent = formatter.format(value);
+      });
+      document.querySelectorAll('[data-stat-percent]').forEach(function (node) {
+        var value = valueAtPath(data, node.getAttribute('data-stat-percent'));
+        var denominator = Number(node.getAttribute('data-stat-denominator'));
+        if (typeof value === 'number' && denominator > 0) {
+          node.textContent = formatter.format(Math.round((value / denominator) * 100)) + '\u00a0%';
+        }
       });
       if (data.first_seen && data.last_seen) {
         var formatDate = function (value) { return new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(value)); };
