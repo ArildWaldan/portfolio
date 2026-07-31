@@ -47,6 +47,22 @@ body {
   border-bottom: 1px solid var(--ink);
 }
 
+.identity-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.portrait-print {
+  width: 25mm;
+  height: 25mm;
+  margin-bottom: 2.4mm;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 36%;
+}
+
 .document-label {
   margin: 0 0 2.4mm;
   color: var(--accent);
@@ -82,6 +98,7 @@ h1 {
 .contacts {
   display: flex;
   flex-direction: column;
+  width: 100%;
   justify-content: flex-end;
   gap: 2.2mm;
   margin: 0;
