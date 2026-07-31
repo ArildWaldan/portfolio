@@ -55,13 +55,13 @@ body {
 }
 
 .portrait-print {
-  width: 25mm;
-  height: 31mm;
+  width: 57mm;
+  height: 25mm;
   margin-bottom: 2.4mm;
   border: 1px solid var(--line);
   border-radius: 1.6mm;
   object-fit: cover;
-  object-position: 50% 36%;
+  object-position: 50% 44%;
   filter: saturate(.9);
 }
 
